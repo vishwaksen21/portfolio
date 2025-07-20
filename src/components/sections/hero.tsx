@@ -11,7 +11,7 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
-              <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
+              <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline whitespace-nowrap">
                 I AM C VISHWAK SEN
               </h1>
               <p className="text-muted-foreground md:text-xl">
