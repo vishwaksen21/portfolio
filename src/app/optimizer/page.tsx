@@ -11,13 +11,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, TrendingUp } from 'lucide-react';
 import { optimizePortfolio, OptimizePortfolioInput, OptimizePortfolioOutput } from '@/ai/flows/optimizer-flow';
 import { motion } from 'framer-motion';
+import { Progress } from '@/components/ui/progress';
 
 const formSchema = z.object({
   goals: z.string().min(10, 'Please describe your career goals in a bit more detail.'),
-  currentWork: z.string().min(20, 'Please provide more details about your current projects.'),
+  currentWork: z.string().min(20, 'Please provide more details about your current projects. Separate each project with a new line.'),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -62,7 +63,7 @@ export default function OptimizerPage() {
           </div>
           <CardTitle className="text-4xl font-bold">AI Portfolio Optimizer</CardTitle>
           <CardDescription className="text-lg text-muted-foreground">
-            Get personalized suggestions to improve your portfolio based on your career goals.
+            Get personalized suggestions and analyze your project's trend score.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -89,7 +90,7 @@ export default function OptimizerPage() {
                     <FormLabel className="text-lg">Describe your portfolio projects.</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Briefly describe the projects in your portfolio, including the technologies used."
+                        placeholder="Describe each project in your portfolio on a new line, including the technologies used."
                         className="min-h-[150px]"
                         {...field}
                       />
@@ -118,8 +119,32 @@ export default function OptimizerPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mt-12"
+                className="mt-12 space-y-8"
              >
+                {result.projectAnalyses && result.projectAnalyses.length > 0 && (
+                 <Card>
+                   <CardHeader>
+                     <div className="flex items-center gap-3">
+                        <TrendingUp className="w-6 h-6" />
+                        <CardTitle>Project Trend Analysis</CardTitle>
+                     </div>
+                     <CardDescription>How your projects align with current industry trends.</CardDescription>
+                   </CardHeader>
+                   <CardContent className="space-y-6">
+                     {result.projectAnalyses.map((analysis, index) => (
+                       <div key={index}>
+                         <div className="flex justify-between items-center mb-1">
+                           <h3 className="font-semibold text-lg">{analysis.projectName}</h3>
+                           <span className="font-bold text-lg text-primary">{analysis.trendScore}/10</span>
+                         </div>
+                         <Progress value={analysis.trendScore * 10} className="h-2" />
+                         <p className="text-sm text-muted-foreground mt-2">{analysis.justification}</p>
+                       </div>
+                     ))}
+                   </CardContent>
+                 </Card>
+                )}
+
               <Card>
                 <CardHeader>
                   <CardTitle>Your Personalized Suggestions</CardTitle>
