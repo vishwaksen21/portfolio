@@ -9,6 +9,16 @@ export function Hero() {
     <section className="relative w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
+          <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2Fhero.png?alt=media&token=e110ac57-8495-46aa-9d5f-972175a022cb"
+              alt="Photo of C Vishwak Sen"
+              width={450}
+              height={600}
+              className="relative z-10 object-contain object-bottom max-h-[400px] lg:max-h-[500px] w-auto"
+              priority
+            />
+          </div>
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
@@ -40,15 +50,6 @@ export function Hero() {
                 </Link>
               </Button>
             </div>
-          </div>
-          <div className="relative hidden lg:flex items-center justify-center h-full min-h-[400px] lg:min-h-[500px]">
-            <Image
-              src="https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2Fhero.png?alt=media&token=e110ac57-8495-46aa-9d5f-972175a022cb"
-              alt="Photo of C Vishwak Sen"
-              width={450}
-              height={600}
-              className="relative z-10 object-contain object-bottom"
-            />
           </div>
         </div>
       </div>
