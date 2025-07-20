@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Diamond } from "lucide-react";
 
@@ -10,8 +10,6 @@ const educationData = [
     years: "Sep 2023 - Jul 2027",
     grade: "Grade: 9.18 CGPA",
     skills: "Python (Programming Language) and Event Management",
-    logo: "https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2FCMR_logo.png?alt=media&token=a62c5e52-1135-4389-8d14-239611f727ce",
-    "data-ai-hint": "university building",
   },
   {
     institution: "Dream World",
@@ -19,8 +17,6 @@ const educationData = [
     years: "",
     grade: "Grade: 93/100",
     skills: "",
-    logo: "https://placehold.co/100x100.png",
-    "data-ai-hint": "school building",
   },
 ];
 
@@ -41,14 +37,6 @@ export function Education() {
               {educationData.map((edu, index) => (
                 <div key={index}>
                   <div className="flex gap-6">
-                    <Image
-                      src={edu.logo}
-                      alt={`${edu.institution} logo`}
-                      width={50}
-                      height={50}
-                      className="rounded-full object-contain h-12 w-12"
-                      data-ai-hint={edu['data-ai-hint']}
-                    />
                     <div className="flex-1">
                       <h3 className="text-xl font-bold">{edu.institution}</h3>
                       <p className="text-muted-foreground">{edu.degree}</p>
