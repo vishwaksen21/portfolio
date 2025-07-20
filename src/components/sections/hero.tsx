@@ -19,7 +19,7 @@ export function Hero() {
               </p>
             </div>
              <div className="flex items-center gap-4">
-                <Link href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
