@@ -20,16 +20,16 @@ export function Hero() {
             </div>
              <div className="flex items-center gap-4">
                 <Link href="#" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                  <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="#" aria-label="GitHub">
-                  <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                  <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="#" aria-label="Email">
-                  <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                  <Mail className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="#" aria-label="Instagram">
-                  <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                  <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
               </div>
             <div className="flex">
@@ -52,7 +52,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-       <div className="absolute top-0 right-0 h-full w-full lg:w-1/2">
+       <div className="absolute top-0 right-0 h-full w-full lg:w-1/2 -z-0">
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
