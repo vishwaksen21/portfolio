@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Bot, Mountain } from "lucide-react";
+import { Menu, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -32,7 +32,7 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="hidden items-center justify-center space-x-2 md:flex md:flex-1 md:justify-center">
+        <div className="hidden items-center justify-center space-x-8 md:flex md:flex-1 md:justify-center">
           <nav className="flex items-center space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
@@ -82,15 +82,6 @@ export function Header() {
                 </div>
               </SheetContent>
             </Sheet>
-          </div>
-          <div className="hidden md:flex items-center ml-auto">
-             <Link
-               href="/optimizer"
-             >
-              <Button asChild className="bg-transparent hover:bg-transparent text-primary hover:text-accent" size="icon">
-                <Bot className="h-5 w-5"/>
-              </Button>
-            </Link>
           </div>
       </div>
     </header>
