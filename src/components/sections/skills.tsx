@@ -25,7 +25,14 @@ const coursework = [
   "Database Systems",
   "Web Development",
   "Operating Systems"
-]
+];
+
+const strengths = [
+  "Soft Skills",
+  "Event Management",
+  "Leadership (Class CR)"
+];
+
 
 export function Skills() {
   return (
@@ -39,7 +46,7 @@ export function Skills() {
             </h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader>
               <CardTitle>Technical Skills</CardTitle>
@@ -74,6 +81,16 @@ export function Skills() {
             <CardContent>
                 <ul className="list-disc list-inside space-y-2">
                     {coursework.map(course => <li key={course}>{course}</li>)}
+                </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Strengths</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <ul className="list-disc list-inside space-y-2">
+                    {strengths.map(strength => <li key={strength}>{strength}</li>)}
                 </ul>
             </CardContent>
           </Card>
