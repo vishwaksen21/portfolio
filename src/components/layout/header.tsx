@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Bot, Menu, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
@@ -64,6 +64,9 @@ export function Header() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="pr-0">
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Menu</SheetTitle>
+                  </SheetHeader>
                   <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
                     <Mountain className="h-6 w-6" />
                     <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
