@@ -32,7 +32,7 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="hidden md:flex flex-1 items-center justify-center space-x-2 md:justify-center">
+        <div className="hidden items-center justify-center space-x-2 md:flex md:flex-1 md:justify-center">
           <nav className="flex items-center space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
@@ -48,7 +48,7 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <div className="md:hidden ml-auto">
+        <div className="ml-auto flex items-center md:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
