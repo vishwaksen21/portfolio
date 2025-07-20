@@ -40,7 +40,7 @@ export function Hero() {
               </Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center h-full min-h-[400px] lg:min-h-[500px]">
+          <div className="relative hidden lg:flex items-center justify-center h-full min-h-[400px] lg:min-h-[500px]">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2Fhero.png?alt=media&token=e110ac57-8495-46aa-9d5f-972175a022cb"
               alt="Photo of C Vishwak Sen"
