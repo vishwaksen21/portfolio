@@ -1,12 +1,20 @@
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Linkedin, Github, Mail, Instagram } from "lucide-react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Linkedin, Github, Mail, Instagram } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative w-full py-12 md:py-16 lg:py-20 bg-background overflow-hidden">
+    <motion.section
+      id="hero"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative w-full py-12 md:py-16 lg:py-20 bg-background overflow-hidden"
+    >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
@@ -29,36 +37,44 @@ export function Hero() {
                 CS & Data Science | Python & C Programmer | Exploring Data-Driven Solutions | Student at CMR Institute of Technology
               </p>
             </div>
-             <div className="flex items-center gap-4">
-                <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
-                </Link>
-                <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
-                </Link>
-                <Link href="mailto:chilukurvishwak21@gmail.com" aria-label="Email">
-                  <Mail className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
-                </Link>
-                <Link href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
-                </Link>
-              </div>
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://www.linkedin.com/in/c-vishwak-sena-b61212286"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
+              </Link>
+              <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
+              </Link>
+              <Link href="mailto:chilukurvishwak21@gmail.com" aria-label="Email">
+                <Mail className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ=="
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
+              </Link>
+            </div>
             <div className="flex">
-              <Button size="lg" className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground" asChild>
-                <Link href="#portfolio">
-                  SEE MY WORK
-                </Link>
+              <Button
+                size="lg"
+                className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground"
+                asChild
+              >
+                <Link href="#portfolio">SEE MY WORK</Link>
               </Button>
             </div>
           </div>
         </div>
       </div>
-       <div className="absolute top-0 right-0 h-full w-full lg:w-1/2 -z-0">
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="absolute inset-0 h-full w-full"
-        >
+      <div className="absolute top-0 right-0 h-full w-full lg:w-1/2 -z-0">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
@@ -72,6 +88,6 @@ export function Hero() {
           />
         </svg>
       </div>
-    </section>
+    </motion.section>
   );
 }

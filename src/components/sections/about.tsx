@@ -1,6 +1,17 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export function About() {
   return (
-    <section id="about" className="py-16 sm:py-20 bg-background">
+    <motion.section
+      id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+      className="py-16 sm:py-20 bg-background"
+    >
       <div className="container px-4 mx-auto md:px-6">
         <div className="text-center mb-12">
           <p className="text-lg text-muted-foreground">ABOUT ME</p>
@@ -10,11 +21,14 @@ export function About() {
           </h2>
         </div>
         <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a passionate Computer Science student with a specialization in Data Science, maintaining an impressive GPA of 9.18/10. My strong foundation in programming and data science, combined with active participation in extracurricular activities and community service, distinguishes me. I excel in team-oriented settings where I can leverage both my analytical abilities and creative thinking to contribute effectively.
-            </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            I am a passionate Computer Science student with a specialization in Data Science, maintaining an impressive
+            GPA of 9.18/10. My strong foundation in programming and data science, combined with active participation in
+            extracurricular activities and community service, distinguishes me. I excel in team-oriented settings where
+            I can leverage both my analytical abilities and creative thinking to contribute effectively.
+          </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
