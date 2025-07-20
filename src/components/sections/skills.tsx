@@ -20,7 +20,7 @@ const coursework = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-32 bg-background">
+    <section id="skills" className="py-16 sm:py-20 bg-background">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
             <p className="text-lg text-muted-foreground">MY ABILITIES</p>

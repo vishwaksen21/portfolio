@@ -6,7 +6,7 @@ import { Linkedin, Github, Mail, Instagram } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 lg:py-20 bg-background overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
