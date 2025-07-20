@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -14,8 +15,8 @@ export function Hero() {
               <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
                 I AM C VISHWAK SEN
               </h1>
-              <p className="text-muted-foreground md:text-xl">
-                COMPUTER SCIENCE AND DATA SCIENCE STUDENT
+              <p className="text-muted-foreground md:text-xl max-w-xl">
+                CS & Data Science | Python & C Programmer | Exploring Data-Driven Solutions | Student at CMR Institute of Technology
               </p>
             </div>
              <div className="flex items-center gap-4">
