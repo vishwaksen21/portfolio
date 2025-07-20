@@ -42,12 +42,11 @@ export function Hero() {
           </div>
           <div className="relative flex items-center justify-center h-full min-h-[400px] lg:min-h-[500px]">
             <Image
-              src="https://placehold.co/450x600.png"
+              src="https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2Fhero.png?alt=media&token=e110ac57-8495-46aa-9d5f-972175a022cb"
               alt="Photo of C Vishwak Sen"
               width={450}
               height={600}
               className="relative z-10 object-contain object-bottom"
-              data-ai-hint="male student"
             />
           </div>
         </div>
