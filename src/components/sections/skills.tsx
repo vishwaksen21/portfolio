@@ -6,8 +6,14 @@ const skills = [
 ];
 
 const certifications = [
-  "Certified TensorFlow Developer",
-  "AWS Certified Solutions Architect - Associate",
+  {
+    title: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
+    issuer: "Stanford University",
+  },
+  {
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
+  },
 ];
 
 const coursework = [
@@ -43,10 +49,13 @@ export function Skills() {
             <CardHeader>
               <CardTitle>Certifications</CardTitle>
             </CardHeader>
-            <CardContent>
-              <ul className="list-disc list-inside space-y-2">
-                {certifications.map(cert => <li key={cert}>{cert}</li>)}
-              </ul>
+            <CardContent className="flex flex-col gap-4">
+                {certifications.map((cert) => (
+                  <div key={cert.title}>
+                    <p className="font-semibold">{cert.title}</p>
+                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  </div>
+                ))}
             </CardContent>
           </Card>
            <Card>

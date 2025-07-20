@@ -7,7 +7,7 @@ const stats = [
   },
   {
     value: "1",
-    label: "Internship Completed",
+    label: "ISRO Internship",
   },
   {
     value: "9.18/10",
