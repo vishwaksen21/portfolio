@@ -26,7 +26,7 @@ export function Header() {
       <div className="container flex h-20 items-center">
         <div className="mr-auto flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-             <Mountain className="h-6 w-6 text-primary" />
+             <Mountain className="h-6 w-6" />
             <span className="font-bold sm:inline-block text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
               VISHWAK SEN
             </span>
@@ -39,8 +39,8 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "transition-colors hover:text-pink-500",
-                  pathname === link.href ? "text-pink-500" : "text-foreground/80"
+                  "transition-colors hover:text-primary",
+                  pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"
                 )}
               >
                 {link.label}
@@ -58,7 +58,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="left" className="pr-0">
                 <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
-                  <Mountain className="h-6 w-6 text-primary" />
+                  <Mountain className="h-6 w-6" />
                   <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
                     VISHWAK SEN
                   </span>
@@ -72,7 +72,7 @@ export function Header() {
                         onClick={() => setSheetOpen(false)}
                          className={cn(
                           "text-foreground text-lg",
-                           pathname === link.href ? "text-pink-500" : "text-foreground"
+                           pathname === link.href ? "text-primary font-semibold" : "text-foreground"
                          )}
                       >
                         {link.label}
