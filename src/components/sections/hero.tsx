@@ -22,7 +22,7 @@ export function Hero() {
                 <Link href="#" aria-label="LinkedIn">
                   <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
-                <Link href="#" aria-label="GitHub">
+                <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="#" aria-label="Email">
