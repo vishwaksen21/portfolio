@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Twitter, Dribbble, Rss, VenetianMask } from "lucide-react";
+import { Linkedin, Github, Mail, Instagram } from "lucide-react";
 
 export function Hero() {
   return (
@@ -12,24 +12,24 @@ export function Hero() {
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
               <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
-                I AM JO BREED
+                I AM C VISHWAK SEN
               </h1>
               <p className="text-muted-foreground md:text-xl">
-                CREATIVE ART DIRECTOR & DESIGNER
+                COMPUTER SCIENCE AND DATA SCIENCE STUDENT
               </p>
             </div>
              <div className="flex items-center gap-4">
-                <Link href="#" aria-label="Twitter">
-                  <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="LinkedIn">
+                  <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="Dribbble">
-                  <Dribbble className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="GitHub">
+                  <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="Portfolio">
-                  <VenetianMask className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="Email">
+                  <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="RSS">
-                  <Rss className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="Instagram">
+                  <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
               </div>
             <div className="flex">
@@ -56,11 +56,11 @@ export function Hero() {
             </div>
             <Image
               src="https://placehold.co/450x600.png"
-              alt="Photo of Jo Breed"
+              alt="Photo of C Vishwak Sen"
               width={450}
               height={600}
               className="relative z-10 object-contain object-bottom"
-              data-ai-hint="male person"
+              data-ai-hint="male student"
             />
           </div>
         </div>

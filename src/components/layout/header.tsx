@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Bot, Briefcase, Rss, Mail, Mountain } from "lucide-react";
+import { Menu, Bot, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/", label: "HOME" },
   { href: "#about", label: "ABOUT" },
   { href: "#portfolio", label: "PORTFOLIO" },
-  { href: "#pages", label: "PAGES" },
+  { href: "#skills", label: "SKILLS" },
   { href: "#blog", label: "BLOG" },
   { href: "#contact", label: "CONTACT" },
 ];
@@ -28,7 +28,7 @@ export function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
              <Mountain className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-              BREED
+              VISHWAK SEN
             </span>
           </Link>
         </div>
@@ -60,7 +60,7 @@ export function Header() {
                 <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
                   <Mountain className="h-6 w-6 text-primary" />
                   <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-                    BREED
+                    VISHWAK SEN
                   </span>
                 </Link>
                 <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
