@@ -19,16 +19,16 @@ export function Hero() {
               </p>
             </div>
              <div className="flex items-center gap-4">
-                <Link href="#" aria-label="LinkedIn">
+                <Link href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
-                <Link href="#" aria-label="Email">
+                <Link href="mailto:youremail@example.com" aria-label="Email">
                   <Mail className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
-                <Link href="#" aria-label="Instagram">
+                <Link href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
               </div>
