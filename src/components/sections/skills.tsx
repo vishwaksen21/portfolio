@@ -10,7 +10,7 @@ const certifications = [
   {
     title: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
     issuer: "Stanford University",
-    url: null,
+    url: "https://www.coursera.org/account/accomplishments/verify/1X2821Y190IK",
   },
   {
     title: "Python for Data Science, AI & Development",
