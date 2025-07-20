@@ -1,51 +1,66 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Twitter, Instagram, Linkedin, ArrowRight } from "lucide-react";
+import { Twitter, Dribbble, Rss, VenetianMask } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
+    <section className="w-full pt-12 md:pt-24 lg:pt-32 bg-background overflow-hidden">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-          <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <p className="text-lg font-semibold text-primary">Hey there!</p>
-              <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
+          <div className="flex flex-col justify-center space-y-6">
+            <div className="space-y-4">
+              <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
+              <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
                 I AM JO BREED
               </h1>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Creative Art Director & Designer
+              <p className="text-muted-foreground md:text-xl">
+                CREATIVE ART DIRECTOR & DESIGNER
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row items-start sm:items-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out" asChild>
-                <Link href="#portfolio">
-                  SEE MY WORK <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <div className="flex items-center gap-4">
+             <div className="flex items-center gap-4">
                 <Link href="#" aria-label="Twitter">
-                  <Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                  <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="Instagram">
-                  <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="Dribbble">
+                  <Dribbble className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="LinkedIn">
-                  <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                <Link href="#" aria-label="Portfolio">
+                  <VenetianMask className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                </Link>
+                <Link href="#" aria-label="RSS">
+                  <Rss className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
               </div>
+            <div className="flex">
+              <Button size="lg" className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground" asChild>
+                <Link href="#portfolio">
+                  SEE MY WORK
+                </Link>
+              </Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center">
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-primary to-accent rounded-full -translate-x-4 translate-y-4 opacity-30 blur-3xl" />
+          <div className="relative flex items-end justify-center h-full min-h-[400px] lg:min-h-[600px]">
+            <div className="absolute inset-0 w-full h-full">
+              <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
+                <defs>
+                  <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style={{stopColor: 'hsl(var(--primary))', stopOpacity: 0.5}} />
+                    <stop offset="100%" style={{stopColor: 'hsl(var(--accent))', stopOpacity: 0.5}} />
+                  </radialGradient>
+                </defs>
+                <path d="M250,0 C388.07,0 500,111.93 500,250 C500,388.07 388.07,500 250,500 C111.93,500 0,388.07 0,250 C0,111.93 111.93,0 250,0 Z" transform="translate(150, 0) scale(1.4)" fill="url(#grad1)"/>
+                <circle cx="450" cy="100" r="30" fill="url(#grad1)" fillOpacity="0.5" />
+                 <circle cx="400" cy="180" r="20" fill="url(#grad1)" fillOpacity="0.5" />
+              </svg>
+            </div>
             <Image
-              src="https://placehold.co/550x550.png"
+              src="https://placehold.co/450x600.png"
               alt="Photo of Jo Breed"
-              width={550}
-              height={550}
-              className="relative rounded-full object-cover aspect-square shadow-2xl z-10"
-              data-ai-hint="person"
+              width={450}
+              height={600}
+              className="relative z-10 object-contain object-bottom"
+              data-ai-hint="male person"
             />
           </div>
         </div>
