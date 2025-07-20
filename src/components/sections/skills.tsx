@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 const skills = [
   "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Python", "SQL", "NoSQL", "Docker", "Git"
@@ -9,10 +10,12 @@ const certifications = [
   {
     title: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
     issuer: "Stanford University",
+    url: null,
   },
   {
     title: "Python for Data Science, AI & Development",
     issuer: "IBM",
+    url: "https://www.coursera.org/account/accomplishments/verify/1X2821Y190IK",
   },
 ];
 
@@ -52,7 +55,13 @@ export function Skills() {
             <CardContent className="flex flex-col gap-4">
                 {certifications.map((cert) => (
                   <div key={cert.title}>
-                    <p className="font-semibold">{cert.title}</p>
+                    {cert.url ? (
+                       <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
+                        {cert.title}
+                      </a>
+                    ) : (
+                      <p className="font-semibold">{cert.title}</p>
+                    )}
                     <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                   </div>
                 ))}
