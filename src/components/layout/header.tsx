@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Mountain } from "lucide-react";
+import { Bot, Menu, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -48,40 +48,48 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <div className="ml-auto flex items-center md:hidden">
-            <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="pr-0">
-                <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
-                  <Mountain className="h-6 w-6" />
-                  <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-                    VISHWAK SEN
-                  </span>
-                </Link>
-                <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-                  <div className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setSheetOpen(false)}
-                         className={cn(
-                          "text-foreground text-lg",
-                           pathname === link.href ? "text-primary font-semibold" : "text-foreground"
-                         )}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+        <div className="flex items-center gap-4">
+          <Link href="/optimizer">
+            <Button variant="ghost" size="icon">
+              <Bot />
+              <span className="sr-only">AI Optimizer</span>
+            </Button>
+          </Link>
+          <div className="ml-auto flex items-center md:hidden">
+              <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="pr-0">
+                  <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
+                    <Mountain className="h-6 w-6" />
+                    <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
+                      VISHWAK SEN
+                    </span>
+                  </Link>
+                  <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+                    <div className="flex flex-col space-y-4">
+                      {navLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setSheetOpen(false)}
+                           className={cn(
+                            "text-foreground text-lg",
+                             pathname === link.href ? "text-primary font-semibold" : "text-foreground"
+                           )}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
       </div>
     </header>
