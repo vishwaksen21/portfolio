@@ -8,7 +8,7 @@ import { Contact } from '@/components/sections/contact';
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-card">
       <Hero />
       <Stats />
       <About />

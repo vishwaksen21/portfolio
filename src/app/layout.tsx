@@ -26,7 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')}>
-        <div className="max-w-screen-xl mx-auto w-full shadow-2xl bg-white">
+        <div className="max-w-screen-xl mx-auto w-full shadow-2xl bg-card">
           <Header />
           <main className="flex-1 w-full">{children}</main>
           <Footer />
