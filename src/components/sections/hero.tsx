@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
-          <div className="flex flex-col justify-center space-y-6 text-left items-start">
+          <div className="flex flex-col justify-center space-y-6 text-center items-center">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
               <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
