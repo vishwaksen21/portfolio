@@ -25,7 +25,7 @@ export function Hero() {
                 <Link href="https://github.com/vishwaksen21" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
-                <Link href="mailto:youremail@example.com" aria-label="Email">
+                <Link href="mailto:chilukurvishwak21@gmail.com" aria-label="Email">
                   <Mail className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
