@@ -30,17 +30,6 @@ export function Hero() {
     >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
-          <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
-            <Image
-              src="/vishwak_portfolio.jpg"
-              alt="Photo of C Vishwak Sen"
-              width={600}
-              height={800}
-              className="relative z-10 object-contain object-bottom max-h-[450px] lg:max-h-[550px] w-auto drop-shadow-2xl"
-              priority
-              data-ai-hint="man portrait"
-            />
-          </div>
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
@@ -92,6 +81,17 @@ export function Hero() {
                 <Link href="#portfolio">SEE MY WORK</Link>
               </Button>
             </div>
+          </div>
+          <div className="relative flex flex-col items-center justify-center">
+             <Image
+              src="/vishwak_portfolio.jpg"
+              alt="Photo of C Vishwak Sen"
+              width={700}
+              height={800}
+              className="relative z-10 object-contain object-bottom max-h-[450px] lg:max-h-[550px] w-auto drop-shadow-2xl"
+              priority
+              data-ai-hint="man portrait"
+            />
           </div>
         </div>
       </div>
