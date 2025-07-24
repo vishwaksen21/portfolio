@@ -34,9 +34,9 @@ export function Hero() {
             <Image
               src="/vishwak_portfolio.jpg"
               alt="Photo of C Vishwak Sen"
-              width={450}
-              height={600}
-              className="relative z-10 object-contain object-bottom max-h-[400px] lg:max-h-[500px] w-auto drop-shadow-2xl"
+              width={600}
+              height={800}
+              className="relative z-10 object-contain object-bottom max-h-[450px] lg:max-h-[550px] w-auto drop-shadow-2xl"
               priority
               data-ai-hint="man portrait"
             />
