@@ -114,6 +114,13 @@ export default function OptimizerPage() {
             </form>
           </Form>
 
+          {isLoading && (
+            <div className="mt-12 text-center">
+                <Loader2 className="mx-auto h-8 w-8 animate-spin text-primary" />
+                <p className="mt-2 text-muted-foreground">Analyzing your portfolio...</p>
+            </div>
+          )}
+
           {result && (
              <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -121,7 +128,7 @@ export default function OptimizerPage() {
                 transition={{ duration: 0.5 }}
                 className="mt-12 space-y-8"
              >
-                {result.projectAnalyses && result.projectAnalyses.length > 0 && (
+                {result.projectAnalyses && Array.isArray(result.projectAnalyses) && result.projectAnalyses.length > 0 && (
                  <Card>
                    <CardHeader>
                      <div className="flex items-center gap-3">
@@ -130,7 +137,7 @@ export default function OptimizerPage() {
                      </div>
                      <CardDescription>How your projects align with current industry trends.</CardDescription>
                    </CardHeader>
-                   <CardContent className="space-y-6">
+                   <CardContent className="space-y-6 pt-6">
                      {result.projectAnalyses.map((analysis, index) => (
                        <div key={index}>
                          <div className="flex justify-between items-center mb-1">
@@ -149,7 +156,7 @@ export default function OptimizerPage() {
                 <CardHeader>
                   <CardTitle>Your Personalized Suggestions</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 pt-6">
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Project Suggestions</h3>
                     <p className="text-muted-foreground">{result.projectSuggestions}</p>
