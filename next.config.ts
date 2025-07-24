@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'live.staticflickr.com',
+        hostname: 'www.flickr.com',
         port: '',
         pathname: '/**',
       },

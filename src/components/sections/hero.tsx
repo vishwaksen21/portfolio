@@ -32,11 +32,11 @@ export function Hero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
             <Image
-              src="https://live.staticflickr.com/65535/54676775546_80aa7635f0_z.jpg"
+              src="https://www.flickr.com/photo_download.gne?id=54676775546&secret=80aa7635f0&size=l&source=photoPageEngagement"
               alt="Photo of C Vishwak Sen"
               width={450}
               height={600}
-              className="relative z-10 object-contain object-bottom max-h-[400px] lg:max-h-[500px] w-auto"
+              className="relative z-10 object-contain object-bottom max-h-[400px] lg:max-h-[500px] w-auto drop-shadow-2xl"
               priority
               data-ai-hint="man portrait"
             />
