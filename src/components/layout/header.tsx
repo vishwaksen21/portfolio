@@ -27,8 +27,8 @@ export function Header() {
         <div className="mr-auto flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
              <Mountain className="h-6 w-6" />
-            <span className="font-bold sm:inline-block text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-              VISHWAK SEN
+            <span className="font-bold sm:inline-block text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
+              C VISHWAK SEN
             </span>
           </Link>
         </div>
@@ -70,8 +70,8 @@ export function Header() {
                   </SheetHeader>
                   <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
                     <Mountain className="h-6 w-6" />
-                    <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-                      VISHWAK SEN
+                    <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
+                      C VISHWAK SEN
                     </span>
                   </Link>
                   <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
