@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { useState } from "react";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const navLinks = [
   { href: "/", label: "HOME" },
@@ -48,13 +49,14 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <Link href="/optimizer">
             <Button variant="ghost" size="icon">
               <Bot />
               <span className="sr-only">AI Optimizer</span>
             </Button>
           </Link>
+          <ThemeSwitcher />
           <div className="ml-auto flex items-center md:hidden">
               <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
                 <SheetTrigger asChild>

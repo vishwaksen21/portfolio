@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Visionary Vault',
@@ -26,12 +27,14 @@ export default function RootLayout({
         />
       </head>
       <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')}>
-        <div className="max-w-screen-xl mx-auto w-full shadow-2xl bg-card">
-          <Header />
-          <main className="flex-1 w-full">{children}</main>
-          <Footer />
-        </div>
-        <Toaster />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="max-w-screen-xl mx-auto w-full shadow-2xl bg-card">
+            <Header />
+            <main className="flex-1 w-full">{children}</main>
+            <Footer />
+          </div>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
