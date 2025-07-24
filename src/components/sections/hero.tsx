@@ -7,6 +7,18 @@ import { Button } from '@/components/ui/button';
 import { Linkedin, Github, Mail, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const WhatsappIcon = () => (
+    <svg
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
+        fill="currentColor"
+    >
+        <path d="M19.11 4.93A9.92 9.92 0 0 0 12 2C6.54 2 2.13 6.43 2 11.89c0 1.91.49 3.73 1.42 5.29L2 22l5.05-1.34a9.92 9.92 0 0 0 4.95 1.26h.01c5.46 0 9.87-4.43 9.88-9.88a9.88 9.88 0 0 0-2.78-6.91zM12 20.38h-.01a8.41 8.41 0 0 1-4.26-1.15l-.3-.18-3.18.84.85-3.1-.2-.32a8.41 8.41 0 0 1-1.29-4.48c0-4.64 3.78-8.42 8.43-8.42a8.42 8.42 0 0 1 8.42 8.42c0 4.64-3.78 8.42-8.42 8.42zM16.56 13.99c-.18-.09-1.07-.53-1.23-.59-.17-.06-.29-.09-.42.09-.12.18-.46.59-.57.7-.11.12-.22.13-.41.04-.19-.09-1.84-1.22-2.88-2.34-.81-.89-1.36-1.99-1.52-2.34-.16-.35-.01-.54.08-.63.08-.08.18-.21.27-.31.1-.11.13-.18.19-.31.06-.12.03-.23 0-.32s-.42-1.01-.57-1.38c-.15-.36-.31-.32-.42-.32h-.38c-.12 0-.31.04-.46.18-.16.14-.58.56-.58 1.38 0 .82.59 1.6.67 1.72s1.17 1.8 2.83 2.51c.39.17.69.27.93.35.48.15.91.13 1.24.08.38-.06 1.07-.44 1.22-.86.15-.42.15-.78.11-.86-.05-.09-.17-.14-.35-.23z"/>
+    </svg>
+);
+
 export function Hero() {
   return (
     <motion.section
@@ -61,6 +73,14 @@ export function Hero() {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
+              </Link>
+              <Link
+                  href="https://wa.me/917019151370"
+                  aria-label="WhatsApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsappIcon />
               </Link>
             </div>
             <div className="flex">
