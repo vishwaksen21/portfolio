@@ -32,7 +32,7 @@ export function Hero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
             <Image
-              src="https://placehold.co/450x600.png"
+              src="/vishwak_portfolio.jpg"
               alt="Photo of C Vishwak Sen"
               width={450}
               height={600}
