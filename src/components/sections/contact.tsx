@@ -84,7 +84,7 @@ export function Contact() {
                   <Instagram className="h-8 w-8 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300" />
                 </Link>
                 <Link
-                  href="https://wa.me/917019151370"
+                  href="https://wa.me/7019151370"
                   aria-label="WhatsApp"
                   target="_blank"
                   rel="noopener noreferrer"
