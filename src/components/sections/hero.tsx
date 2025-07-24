@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -19,12 +20,13 @@ export function Hero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/stunning-car-34200.appspot.com/o/i-or6g170h1rkaq04g1c%2Fhero.png?alt=media&token=e110ac57-8495-46aa-9d5f-972175a022cb"
+              src="https://placehold.co/450x600.png"
               alt="Photo of C Vishwak Sen"
               width={450}
               height={600}
               className="relative z-10 object-contain object-bottom max-h-[400px] lg:max-h-[500px] w-auto"
               priority
+              data-ai-hint="man portrait"
             />
           </div>
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start">
