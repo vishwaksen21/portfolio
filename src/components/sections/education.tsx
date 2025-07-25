@@ -10,14 +10,12 @@ const educationData = [
     institution: 'CMR Institute Of Technology',
     degree: "Bachelor's degree, Computer Science",
     years: 'Sep 2023 - Jul 2027',
-    grade: 'Grade: 9.18 CGPA',
     skills: 'Python (Programming Language) and Event Management',
   },
   {
     institution: 'Dream World',
     degree: 'CBSE',
     years: '',
-    grade: 'Grade: 93/100',
     skills: '',
   },
 ];
@@ -48,7 +46,6 @@ export function Education() {
                       <h3 className="text-xl font-bold">{edu.institution}</h3>
                       <p className="text-muted-foreground">{edu.degree}</p>
                       {edu.years && <p className="text-sm text-muted-foreground">{edu.years}</p>}
-                      <p className="text-sm text-muted-foreground">{edu.grade}</p>
                       {edu.skills && (
                         <div className="flex items-center gap-2 mt-2 text-muted-foreground text-sm">
                           <Diamond className="w-4 h-4" />
