@@ -72,7 +72,7 @@ export function Hero() {
                 >
                   <WhatsappIcon />
               </Link>
-              <p className="italic text-muted-foreground text-sm">click the icons</p>
+              <p className="italic text-muted-foreground text-sm">click to contact</p>
             </div>
             <div className="flex">
               <Button
@@ -86,11 +86,11 @@ export function Hero() {
           </div>
           <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
             <Image
-              src="/vishwak_portfolio.jpg"
+              src="/image.png"
               alt="Photo of C Vishwak Sen"
-              width={450}
-              height={600}
-              className="relative z-10 object-contain object-bottom w-auto drop-shadow-2xl h-[450px] lg:h-[600px]"
+              width={430}
+              height={450}
+              className="relative z-10 object-contain object-bottom drop-shadow-2xl w-[430px] h-[450px]"
               priority
               data-ai-hint="man portrait"
             />
