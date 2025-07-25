@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,7 +11,7 @@ const stats = [
   },
   {
     value: '1',
-    label: 'ISRO Internship',
+    label: 'Internship',
   },
   {
     value: '9.18/10',

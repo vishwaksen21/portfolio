@@ -84,10 +84,10 @@ export function Hero() {
           </div>
           <div className="relative flex flex-col items-center justify-center">
              <Image
-              src="/vishwak_portfolio.jpg"
-              alt="Photo of C Vishwak Sen"
-              width={700}
-              height={800}
+              src="/sen_port.png"
+              alt=""
+              width={300}
+              height={1000}
               className="relative z-10 object-contain object-bottom max-h-[450px] lg:max-h-[550px] w-auto drop-shadow-2xl"
               priority
               data-ai-hint="man portrait"
