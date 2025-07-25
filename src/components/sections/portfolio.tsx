@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ProjectModal } from '@/components/ui/project-modal';
 import { Card, CardContent } from '@/components/ui/card';
 import { Eye } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const projects = [
   {
@@ -53,6 +55,8 @@ const projects = [
 
 export type Project = (typeof projects)[0];
 
+const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -72,10 +76,14 @@ const itemVariants = {
       duration: 0.5,
     },
   },
+  exit: { y: -20, opacity: 0, transition: { duration: 0.3 } },
 };
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = activeFilter === 'All' ? projects : projects.filter((p) => p.category === activeFilter);
 
   return (
     <>
@@ -100,46 +108,62 @@ export function Portfolio() {
             </p>
           </div>
 
+          <div className="flex justify-center flex-wrap gap-2 mb-10">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={activeFilter === category ? 'default' : 'outline'}
+                onClick={() => setActiveFilter(category)}
+                className={cn('rounded-full', activeFilter === category && 'bg-primary text-primary-foreground')}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
           <motion.div
+            layout
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            animate="visible"
             className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
           >
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={itemVariants}
-                layoutId={`card-${project.id}`}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                onClick={() => setSelectedProject(project)}
-                className="cursor-pointer"
-              >
-                <Card className="overflow-hidden h-full group">
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="object-cover w-full h-auto"
-                        data-ai-hint={project['data-ai-hint']}
-                      />
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Eye className="w-12 h-12 text-white" />
+            <AnimatePresence>
+              {filteredProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  variants={itemVariants}
+                  exit="exit"
+                  layoutId={`card-${project.id}`}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  onClick={() => setSelectedProject(project)}
+                  className="cursor-pointer"
+                >
+                  <Card className="overflow-hidden h-full group">
+                    <CardContent className="p-0">
+                      <div className="relative">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={600}
+                          height={400}
+                          className="object-cover w-full h-auto"
+                          data-ai-hint={project['data-ai-hint']}
+                        />
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <Eye className="w-12 h-12 text-white" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold">{project.title}</h3>
-                      <p className="text-sm text-muted-foreground">{project.category}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground">{project.category}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
         </div>
       </motion.section>
