@@ -30,7 +30,7 @@ export function Hero() {
     >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
-          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start order-last lg:order-first">
+          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest text-sm md:text-base">HEY THERE!</p>
               <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
@@ -95,7 +95,7 @@ export function Hero() {
               </Button>
             </div>
           </div>
-          <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
+          <div className="relative flex flex-col items-center justify-center">
             <Image
               src="/image.png"
               alt="Photo of C Vishwak Sen"
