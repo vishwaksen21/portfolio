@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -71,7 +72,7 @@ export function Skills() {
         <div className="text-center mb-12">
           <p className="text-lg text-muted-foreground">MY ABILITIES</p>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-2 mb-4"></div>
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
             Skills & Expertise
           </h2>
         </div>
@@ -94,7 +95,7 @@ export function Skills() {
                     {skills.map((skill) => (
                       <Tooltip key={skill.name}>
                         <TooltipTrigger asChild>
-                           <div className="w-16 h-16 flex items-center justify-center bg-muted/50 rounded-lg transition-all duration-300 hover:bg-muted hover:scale-110 cursor-pointer p-2">
+                           <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-muted/50 rounded-lg transition-all duration-300 hover:bg-muted hover:scale-110 cursor-pointer p-2">
                               <div className="w-full h-full text-muted-foreground">
                                 {skill.icon}
                               </div>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -23,11 +24,11 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center">
+      <div className="container flex h-16 items-center">
         <div className="mr-auto flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
              <Mountain className="h-6 w-6" />
-            <span className="font-bold sm:inline-block text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
+            <span className="font-bold sm:inline-block text-xl md:text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
               C VISHWAK SEN
             </span>
           </Link>

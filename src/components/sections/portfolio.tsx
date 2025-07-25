@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -90,7 +91,7 @@ export function Portfolio() {
           <div className="text-center mb-12">
             <p className="text-lg text-muted-foreground">MY WORK</p>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-2 mb-4"></div>
-            <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
               Featured Projects
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

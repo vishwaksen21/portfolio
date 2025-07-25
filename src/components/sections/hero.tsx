@@ -30,10 +30,10 @@ export function Hero() {
     >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
-          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start">
+          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start order-first">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
-              <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl font-headline">
+              <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
                 I AM C VISHWAK SEN
               </h1>
               <p className="text-muted-foreground md:text-xl max-w-xl">
@@ -86,8 +86,8 @@ export function Hero() {
             <Image
               src="/vishwak_portfolio.jpg"
               alt="Photo of C Vishwak Sen"
-              width={550}
-              height={700}
+              width={500}
+              height={600}
               className="relative z-10 object-contain object-bottom w-auto drop-shadow-2xl"
               priority
               data-ai-hint="man portrait"

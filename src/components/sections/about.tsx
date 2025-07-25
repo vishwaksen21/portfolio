@@ -1,3 +1,4 @@
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -16,7 +17,7 @@ export function About() {
         <div className="text-center mb-12">
           <p className="text-lg text-muted-foreground">ABOUT ME</p>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-2 mb-4"></div>
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
             A Glimpse Into My World
           </h2>
         </div>
