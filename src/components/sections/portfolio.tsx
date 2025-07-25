@@ -12,7 +12,7 @@ const projects = [
     id: 1,
     title: 'Billing Management System',
     category: 'Software Development',
-    image: 'https://placehold.co/600x400.png',
+    image: '/billing.png',
     'data-ai-hint': 'billing software',
     description:
       'A comprehensive billing management system designed to streamline invoicing and payment processing. Features include automated billing, customer management, and detailed financial reporting.',
@@ -22,7 +22,7 @@ const projects = [
     id: 2,
     title: 'Pulsar & Non-Pulsar Detection',
     category: 'Machine Learning',
-    image: 'https://placehold.co/600x400.png',
+    image: '/ml.png',
     'data-ai-hint': 'space astronomy',
     description:
       'A machine learning model developed to classify celestial objects as pulsars or non-pulsars based on radio telescope data. Achieved high accuracy using various classification algorithms.',
@@ -32,11 +32,21 @@ const projects = [
     id: 3,
     title: 'Student Management System',
     category: 'Web Development',
-    image: 'https://placehold.co/600x400.png',
+    image: '/student-management.png',
     'data-ai-hint': 'student database',
     description:
       'A web-based application to manage student records, including personal details, academic performance, and attendance. Built with a user-friendly interface for administrators and faculty.',
     technologies: ['PHP', 'HTML', 'CSS', 'MySQL'],
+  },
+  {
+    id: 4,
+    title: 'BlueConnect',
+    category: 'Web Development',
+    image: 'https://placehold.co/600x400.png',
+    'data-ai-hint': 'service platform',
+    description:
+      'BlueConnect is a comprehensive platform designed to bridge the gap between blue-collar workers and individuals in need of their services. The project offers a user-friendly web application where workers can list their services, showcase their skills through images, and connect with potential clients. The platform includes a price negotiation system and encompasses three key sides: the admin side, worker side, and client side.',
+    technologies: ['Next.js', 'React', 'MongoDB', 'Tailwind CSS'],
   },
 ];
 
