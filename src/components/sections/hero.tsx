@@ -32,9 +32,10 @@ export function Hero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start order-first">
             <div className="space-y-4">
-              <p className="font-semibold text-muted-foreground tracking-widest">HEY THERE!</p>
+              <p className="font-semibold text-muted-foreground tracking-widest text-sm md:text-base">HEY THERE!</p>
               <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-                I AM C VISHWAK SEN
+                I AM  C 
+                VISHWAK SENA
               </h1>
               <p className="text-muted-foreground md:text-xl max-w-xl">
                 CS & Data Science | Python & C Programmer | Exploring Data-Driven Solutions | Student at CMR Institute of Technology
@@ -71,24 +72,25 @@ export function Hero() {
                 >
                   <WhatsappIcon />
               </Link>
+              <p className="italic text-muted-foreground text-sm">click the icons</p>
             </div>
             <div className="flex">
               <Button
                 size="lg"
-                className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground"
+                className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground text-base md:text-lg"
                 asChild
               >
                 <Link href="#portfolio">SEE MY WORK</Link>
               </Button>
             </div>
           </div>
-          <div className="relative flex flex-col items-center justify-center">
+          <div className="relative flex flex-col items-center justify-center order-first lg:order-last">
             <Image
               src="/vishwak_portfolio.jpg"
               alt="Photo of C Vishwak Sen"
-              width={500}
+              width={450}
               height={600}
-              className="relative z-10 object-contain object-bottom w-auto drop-shadow-2xl"
+              className="relative z-10 object-contain object-bottom w-auto drop-shadow-2xl h-[450px] lg:h-[600px]"
               priority
               data-ai-hint="man portrait"
             />
