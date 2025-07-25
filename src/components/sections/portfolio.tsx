@@ -42,7 +42,7 @@ const projects = [
     id: 4,
     title: 'BlueConnect',
     category: 'Web Development',
-    image: 'https://placehold.co/600x400.png',
+    image: '/BlueConnect.png',
     'data-ai-hint': 'service platform',
     description:
       'BlueConnect is a comprehensive platform designed to bridge the gap between blue-collar workers and individuals in need of their services. The project offers a user-friendly web application where workers can list their services, showcase their skills through images, and connect with potential clients. The platform includes a price negotiation system and encompasses three key sides: the admin side, worker side, and client side.',
