@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Linkedin, Github, Mail, Instagram } from 'lucide-react';
+import { Linkedin, Github, Mail, Instagram, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const WhatsappIcon = () => (
@@ -30,7 +30,7 @@ export function Hero() {
     >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
-          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start order-first">
+          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left items-center lg:items-start order-last lg:order-first">
             <div className="space-y-4">
               <p className="font-semibold text-muted-foreground tracking-widest text-sm md:text-base">HEY THERE!</p>
               <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
@@ -72,15 +72,26 @@ export function Hero() {
                 >
                   <WhatsappIcon />
               </Link>
-              <p className="italic text-muted-foreground text-sm">click to contact</p>
+              <p className="italic text-muted-foreground text-sm">click the icons</p>
             </div>
-            <div className="flex">
+            <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
                 className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 bg-gradient-to-r from-primary to-accent text-primary-foreground text-base md:text-lg"
                 asChild
               >
                 <Link href="#portfolio">SEE MY WORK</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 text-base md:text-lg"
+                asChild
+              >
+                <Link href="/C-Vishwak-Sena-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-5 w-5" />
+                  DOWNLOAD RESUME
+                </Link>
               </Button>
             </div>
           </div>
@@ -90,7 +101,7 @@ export function Hero() {
               alt="Photo of C Vishwak Sen"
               width={430}
               height={450}
-              className="relative z-10 object-contain object-bottom drop-shadow-2xl w-[430px] h-[450px]"
+              className="relative z-10 object-contain object-bottom drop-shadow-2xl"
               priority
               data-ai-hint="man portrait"
             />
