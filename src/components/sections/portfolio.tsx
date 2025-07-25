@@ -108,19 +108,6 @@ export function Portfolio() {
             </p>
           </div>
 
-          <div className="flex justify-center flex-wrap gap-2 mb-10">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={activeFilter === category ? 'default' : 'outline'}
-                onClick={() => setActiveFilter(category)}
-                className={cn('rounded-full', activeFilter === category && 'bg-primary text-primary-foreground')}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-
           <motion.div
             layout
             variants={containerVariants}
@@ -129,7 +116,7 @@ export function Portfolio() {
             className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
           >
             <AnimatePresence>
-              {filteredProjects.map((project) => (
+              {projects.map((project) => (
                 <motion.div
                   key={project.id}
                   variants={itemVariants}
