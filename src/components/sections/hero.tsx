@@ -88,7 +88,7 @@ export function Hero() {
                 className="rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out px-10 py-6 text-base md:text-lg"
                 asChild
               >
-                <Link href="/C-Vishwak-Sena-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Link href="/sen_resume.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-5 w-5" />
                   DOWNLOAD RESUME
                 </Link>
@@ -101,7 +101,7 @@ export function Hero() {
               alt="Photo of C Vishwak Sen"
               width={430}
               height={450}
-              className="relative z-10 object-contain object-bottom drop-shadow-2xl"
+              className="relative z-10 object-contain object-bottom drop-shadow-2xl w-[430px] h-[450px]"
               priority
               data-ai-hint="man portrait"
             />
