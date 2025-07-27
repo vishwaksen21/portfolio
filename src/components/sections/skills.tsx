@@ -32,7 +32,7 @@ const certifications = [
   {
     title: 'Python for Data Science, AI & Development',
     issuer: 'IBM',
-    url: 'https://www.coursera.org/account/accomplishments/verify/1X2821Y190IK',
+    url: 'https://www.coursera.org/account/accomplishments/verify/5JHLC2DU0J1K',
   },
 ];
 
