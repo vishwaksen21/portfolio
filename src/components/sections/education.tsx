@@ -10,7 +10,7 @@ const educationData = [
     institution: 'CMR Institute Of Technology',
     degree: "Bachelor's degree, Computer Science",
     years: 'Sep 2023 - Jul 2027',
-    skills: 'Python (Programming Language) and Event Management',
+    skills: '',
   },
   {
     institution: 'Dream World',
