@@ -96,15 +96,22 @@ export function Hero() {
             </div>
           </div>
           <div className="relative flex flex-col items-center justify-center">
-            <Image
-              src="/image.png"
-              alt="Photo of C Vishwak Sen"
-              width={430}
-              height={450}
-              className="relative z-10 object-contain object-bottom drop-shadow-2xl w-[430px] h-[450px]"
-              priority
-              data-ai-hint="man portrait"
-            />
+            <motion.div 
+  className="relative flex flex-col items-center justify-center"
+  initial={{ scale: 0.5, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+>
+  <Image
+    src="/image.png"
+    alt="Photo of C Vishwak Sen"
+    width={430}
+    height={450}
+    className="relative z-10 object-contain object-bottom drop-shadow-2xl w-[430px] h-[450px]"
+    priority
+    data-ai-hint="man portrait"
+  />
+</motion.div>
           </div>
         </div>
       </div>
