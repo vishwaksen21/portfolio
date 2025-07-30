@@ -18,8 +18,10 @@ export const metadata: Metadata = {
   title: 'vishwak_portfolio',
   description: 'Portfolio for a creative professional.',
   icons: {
-    icon: '/icon.png',
-  },
+  icon: '/icon.png',
+  shortcut: '/icon.png',
+  apple: '/icon.png',
+},
 };
 
 export default function RootLayout({
