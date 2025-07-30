@@ -5,10 +5,21 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
-  title: 'Vishwak Sen',
+  title: 'vishwak_portfolio',
   description: 'Portfolio for a creative professional.',
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -17,16 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')}>
+    <html lang="en" suppressHydrationWarning className={poppins.variable}>
+      <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="max-w-screen-xl mx-auto w-full shadow-2xl bg-card">
             <Header />
