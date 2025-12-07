@@ -15,9 +15,32 @@ const experiences = [
     description: [
       'Executed project "Mausam Data Training using Machine Learning" on meteorological datasets',
       'Processed and analyzed large-scale weather data, improving model accuracy by 12%',
-      'Designed ML pipelines for data ingestion, cleaning, feature extraction, and evaluation in Python',
-      'Collaborated with the Range Operations team, gaining exposure to real-time launch operations',
-      'Rated "Very Good" for conduct and contribution by the ISRO Group Director, MSG Division',
+      'Designed ML pipelines for data processing, feature extraction, and model evaluation',
+      'Rated "Very Good" for conduct and contribution by ISRO Group Director, MSG Division',
+    ],
+  },
+  {
+    role: 'Technical Lead',
+    company: 'Center for Cognitive Activities - CMRIT',
+    period: 'April 2025 - Present',
+    location: 'Bengaluru, India',
+    type: 'Leadership',
+    description: [
+      'Leading technical team in organizing and executing college-wide events',
+      'Managed event logistics and technical operations for Express & Impress, MindSpeak',
+      'Coordinating with cross-functional teams for seamless event delivery',
+    ],
+  },
+  {
+    role: 'Event Management Head',
+    company: 'Innovation Club - CMRIT',
+    period: '2024 - Present',
+    location: 'Bengaluru, India',
+    type: 'Leadership',
+    description: [
+      'Spearheading event planning and execution for innovation-focused activities',
+      'Building collaborative environment for student innovation and creativity',
+      'Organizing workshops and technical sessions for skill development',
     ],
   },
 ];

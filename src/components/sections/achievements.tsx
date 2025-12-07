@@ -42,6 +42,9 @@ const achievementsData = [
     icon: <Award className="h-6 w-6 text-primary" />,
     category: 'Certifications',
     items: [
+      'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)',
+      'Full Stack Development - Infosys',
+      'Introduction to NoSQL Databases',
       'Divide and Conquer, Sorting and Searching, and Randomized Algorithms - Stanford University',
       'Python for Data Science, AI & Development - IBM',
     ],

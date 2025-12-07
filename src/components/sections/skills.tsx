@@ -31,6 +31,21 @@ const skills = [
 
 const certifications = [
   {
+    title: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)',
+    issuer: 'Oracle',
+    url: '#',
+  },
+  {
+    title: 'Full Stack Development',
+    issuer: 'Infosys',
+    url: '#',
+  },
+  {
+    title: 'Introduction to NoSQL Databases',
+    issuer: 'Coursera',
+    url: '#',
+  },
+  {
     title: 'Divide and Conquer, Sorting and Searching, and Randomized Algorithms',
     issuer: 'Stanford University',
     url: 'https://www.coursera.org/account/accomplishments/verify/1X2821Y190IK',
