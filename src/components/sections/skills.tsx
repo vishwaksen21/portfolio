@@ -14,11 +14,17 @@ import {
 
 const skills = [
   { name: 'Python', icon: <FileCode /> },
+  { name: 'C++', icon: <Code /> },
   { name: 'C', icon: <Code /> },
   { name: 'Java', icon: <Coffee /> },
   { name: 'SQL', icon: <Database /> },
-  { name: 'NoSQL', icon: <DatabaseZap /> },
-  { name: 'Django', icon: <Server /> },
+  { name: 'HTML5', icon: <FileCode /> },
+  { name: 'CSS3', icon: <FileCode /> },
+  { name: 'JavaScript', icon: <FileCode /> },
+  { name: 'React.js', icon: <Server /> },
+  { name: 'Node.js', icon: <Server /> },
+  { name: 'MySQL', icon: <Database /> },
+  { name: 'MongoDB', icon: <DatabaseZap /> },
   { name: 'Machine Learning', icon: <BrainCircuit /> },
 ];
 
@@ -66,13 +72,12 @@ export function Skills() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
-      className="py-16 sm:py-20 bg-background"
+      className="py-20 sm:py-24 bg-background"
     >
-      <div className="container px-4 md:px-6">
-        <div className="text-center mb-12">
-          <p className="text-lg text-muted-foreground">MY ABILITIES</p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-2 mb-4"></div>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">My Abilities</p>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl px-4">
             Skills & Expertise
           </h2>
         </div>
@@ -82,12 +87,12 @@ export function Skills() {
            initial="hidden"
            whileInView="visible"
            viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-8 md:grid-cols-1 lg:grid-cols-2"
+          className="max-w-4xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="lg:col-span-1">
-            <Card className='h-full'>
+          <motion.div variants={itemVariants}>
+            <Card className='border-muted shadow-lg'>
               <CardHeader>
-                <CardTitle>Technical Skills</CardTitle>
+                <CardTitle className="text-2xl">Technical Skills</CardTitle>
               </CardHeader>
               <CardContent>
                 <TooltipProvider>
@@ -95,10 +100,11 @@ export function Skills() {
                     {skills.map((skill) => (
                       <Tooltip key={skill.name}>
                         <TooltipTrigger asChild>
-                           <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-muted/50 rounded-lg transition-all duration-300 hover:bg-muted hover:scale-110 cursor-pointer p-2">
-                              <div className="w-full h-full text-muted-foreground">
+                           <div className="flex flex-col items-center justify-center gap-2 w-20 h-20 sm:w-24 sm:h-24 bg-muted/30 rounded-xl transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 cursor-pointer p-3 border border-muted">
+                              <div className="w-8 h-8">
                                 {skill.icon}
                               </div>
+                              <span className="text-xs font-medium text-center">{skill.name}</span>
                             </div>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -108,27 +114,6 @@ export function Skills() {
                     ))}
                   </div>
                 </TooltipProvider>
-              </CardContent>
-            </Card>
-          </motion.div>
-          <motion.div variants={itemVariants} className="lg:col-span-1">
-            <Card className='h-full'>
-              <CardHeader>
-                <CardTitle>Certifications</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-col gap-4">
-                {certifications.map((cert) => (
-                  <div key={cert.title}>
-                    {cert.url ? (
-                      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
-                        {cert.title}
-                      </a>
-                    ) : (
-                      <p className="font-semibold">{cert.title}</p>
-                    )}
-                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  </div>
-                ))}
               </CardContent>
             </Card>
           </motion.div>

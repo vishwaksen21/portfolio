@@ -6,16 +6,20 @@ import { motion } from 'framer-motion';
 
 const stats = [
   {
-    value: '5+',
-    label: 'Academic Projects',
+    value: '7+',
+    label: 'Projects Completed',
+  },
+  {
+    value: '9.12',
+    label: 'CGPA',
   },
   {
     value: '1',
     label: 'Internship',
   },
   {
-    value: '9.18/10',
-    label: 'GPA',
+    value: '5+',
+    label: 'Hackathons',
   },
 ];
 
@@ -49,24 +53,24 @@ export function Stats() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      className="py-16 sm:py-20"
+      className="py-12 sm:py-16 md:py-20"
     >
-      <div className="container px-4 md:px-6">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="grid grid-cols-1 gap-8 sm:grid-cols-3"
+          className="grid grid-cols-1 gap-8 sm:gap-6 xs:grid-cols-3"
         >
           {stats.map((stat) => (
             <motion.div key={stat.label} variants={itemVariants}>
               <Card className="text-center border-0 shadow-none bg-transparent">
                 <CardContent className="flex flex-col items-center justify-center p-0">
-                  <p className="text-5xl font-extrabold bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text mb-2">
+                  <p className="text-4xl md:text-5xl font-bold text-primary mb-2">
                     {stat.value}
                   </p>
-                  <p className="text-base text-muted-foreground">{stat.label}</p>
+                  <p className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</p>
                 </CardContent>
               </Card>
             </motion.div>

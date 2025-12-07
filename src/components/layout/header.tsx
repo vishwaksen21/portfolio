@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Bot, Menu, Mountain } from "lucide-react";
+import { Menu, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -11,11 +11,14 @@ import { cn } from "@/lib/utils";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const navLinks = [
-  { href: "/", label: "HOME" },
-  { href: "#about", label: "ABOUT" },
-  { href: "#portfolio", label: "WORK" },
-  { href: "#skills", label: "SKILLS" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "/", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#education", label: "Education" },
+  { href: "#achievements", label: "Achievements" },
+  { href: "#portfolio", label: "Work" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -23,25 +26,25 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center px-4">
         <div className="mr-auto flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-             <Mountain className="h-6 w-6" />
-            <span className="font-bold sm:inline-block text-xl md:text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
-              PORTFOLIO
+          <Link href="/" className="flex items-center space-x-2">
+             <Mountain className="h-5 w-5 text-primary" />
+            <span className="font-semibold text-base md:text-lg">
+              Portfolio
             </span>
           </Link>
         </div>
-        <div className="hidden items-center justify-center space-x-8 md:flex md:flex-1 md:justify-center">
-          <nav className="flex items-center space-x-8 text-sm font-medium">
+        <div className="hidden items-center justify-center space-x-6 md:space-x-8 md:flex md:flex-1 md:justify-center">
+          <nav className="flex items-center space-x-6 md:space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
                   "transition-colors hover:text-primary",
-                  pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"
+                  pathname === link.href ? "text-primary font-semibold" : "text-foreground/70"
                 )}
               >
                 {link.label}
@@ -50,29 +53,23 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
-          <Link href="/optimizer">
-            <Button variant="ghost" size="icon">
-              <Bot />
-              <span className="sr-only">AI Optimizer</span>
-            </Button>
-          </Link>
           <ThemeSwitcher />
-          <div className="ml-auto flex items-center md:hidden">
+          <div className="flex items-center md:hidden">
               <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
-                    <Menu className="h-6 w-6" />
+                    <Menu className="h-5 w-5" />
                     <span className="sr-only">Toggle Menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="pr-0">
+                <SheetContent side="left" className="pr-0 w-[280px] sm:w-[350px]">
                   <SheetHeader>
                     <SheetTitle className="sr-only">Menu</SheetTitle>
                   </SheetHeader>
-                  <Link href="/" className="mr-6 flex items-center space-x-2 p-6">
-                    <Mountain className="h-6 w-6" />
-                    <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text whitespace-nowrap">
-                      PORTFOLIO
+                  <Link href="/" className="flex items-center space-x-2 p-6">
+                    <Mountain className="h-5 w-5 text-primary" />
+                    <span className="font-semibold text-lg">
+                      Portfolio
                     </span>
                   </Link>
                   <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
@@ -83,8 +80,8 @@ export function Header() {
                           href={link.href}
                           onClick={() => setSheetOpen(false)}
                            className={cn(
-                            "text-foreground text-lg",
-                             pathname === link.href ? "text-primary font-semibold" : "text-foreground"
+                            "text-foreground text-base font-medium transition-colors hover:text-primary",
+                             pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"
                            )}
                         >
                           {link.label}
