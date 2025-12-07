@@ -25,6 +25,17 @@ export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const pathname = usePathname();
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      setSheetOpen(false);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center px-4">
@@ -42,6 +53,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   "transition-colors hover:text-primary",
                   pathname === link.href ? "text-primary font-semibold" : "text-foreground/70"
@@ -78,7 +90,7 @@ export function Header() {
                         <Link
                           key={link.href}
                           href={link.href}
-                          onClick={() => setSheetOpen(false)}
+                          onClick={(e) => handleNavClick(e, link.href)}
                            className={cn(
                             "text-foreground text-base font-medium transition-colors hover:text-primary",
                              pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"
