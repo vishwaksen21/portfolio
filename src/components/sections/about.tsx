@@ -30,7 +30,7 @@ export function About() {
               transition={{ duration: 0.6 }}
               className="relative order-2 lg:order-1"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-sm mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-48 sm:w-64 md:w-80 lg:max-w-sm mx-auto">
                 <Image
                   src="/vishwak_professional.png"
                   alt="C Vishwak Sena - Professional Photo"

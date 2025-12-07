@@ -53,6 +53,7 @@ const projects = [
     category: 'Software Development',
     image: '/billing.png',
     'data-ai-hint': 'billing software',
+    github: 'https://github.com/vishwaksen21/Billing-System-with-MySQL-and-Tkinter',
     description:
       'A comprehensive Java-based billing management system designed to streamline invoicing and payment processing for businesses. Features include automated billing cycles, customer data management, invoice generation, payment tracking, and detailed financial reporting with export capabilities.',
     technologies: ['Java', 'Swing', 'MySQL', 'JDBC', 'JFrame'],
@@ -85,6 +86,7 @@ const projects = [
     category: 'Software Development',
     image: '/student-management.png',
     'data-ai-hint': 'student database',
+    github: 'https://github.com/vishwaksen21/Student-Management-System',
     description:
       'Built a Python desktop application with Tkinter GUI to manage student records efficiently. The system integrates with MySQL database for secure storage and fast retrieval, featuring user-friendly dashboards and search functionality for efficient record management.',
     technologies: ['Python', 'Tkinter', 'MySQL'],
