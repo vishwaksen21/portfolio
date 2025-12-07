@@ -9,6 +9,28 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  webpack: (config, { isServer }) => {
+    // Ignore AI/Genkit modules during build
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@opentelemetry/exporter-jaeger': false,
+      '@genkit-ai/firebase': false,
+    };
+    
+    config.externals = [...(config.externals || [])];
+    
+    // Ignore problematic modules
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    
+    return config;
+  },
   images: {
     remotePatterns: [
       {
