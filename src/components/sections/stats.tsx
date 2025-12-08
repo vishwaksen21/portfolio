@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const stats = [
   {
-    value: '7+',
+    value: '6+',
     label: 'Projects Completed',
   },
   {
@@ -14,7 +14,7 @@ const stats = [
     label: 'CGPA',
   },
   {
-    value: '1',
+    value: '1+',
     label: 'Internship',
   },
   {

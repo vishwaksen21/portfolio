@@ -52,34 +52,14 @@ export function About() {
               <div className="bg-muted/30 p-4 sm:p-6 rounded-xl border border-muted">
                 <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3">Career Objective</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Passionate Computer Science student specializing in Data Science, with a strong foundation in 
-                  programming and analytical problem-solving. I thrive in team-oriented environments, combining 
-                  analytical abilities with creative thinking to drive impactful outcomes. Dedicated to continuous 
-                  learning and leveraging technology to address real-world challenges.
+                  Computer Science student specializing in Data Science with strong programming and problem-solving skills. 
+                  Passionate about leveraging technology to solve real-world challenges through machine learning and full-stack development.
                 </p>
               </div>
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                I am a Computer Science student specializing in Data Science at CMR Institute of Technology, 
-                maintaining a CGPA of 9.12/10. With strong skills in Python, C++, Java, and web technologies, 
-                I'm passionate about creating innovative solutions through software development and machine learning.
+                Maintaining a CGPA of 9.12/10 at CMR Institute of Technology with expertise in Python, C++, Java, 
+                and modern web technologies.
               </p>
-              <div className="pt-4">
-                <h3 className="text-lg font-semibold text-foreground mb-3">What Drives Me</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">▸</span>
-                    <span>Building impactful projects that solve real-world problems</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">▸</span>
-                    <span>Continuous learning in AI, ML, and Data Science</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">▸</span>
-                    <span>Contributing to open-source and collaborative projects</span>
-                  </li>
-                </ul>
-              </div>
             </motion.div>
           </div>
         </div>

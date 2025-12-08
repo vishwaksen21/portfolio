@@ -13,12 +13,7 @@ const educationData = [
     years: 'Sep 2023 - Jul 2027 (Pursuing)',
     location: 'AECS Layout, Bangalore',
     gpa: 'CGPA: 9.12/10',
-    achievements: [
-      'Expected graduation: 2027',
-      'Specialized in Data Science and Machine Learning',
-      'Active participation in technical events and coding competitions',
-      'Served as Class Representative in the 4th & 5th semester',
-    ],
+
   },
   {
     institution: 'Vasishta PU College',

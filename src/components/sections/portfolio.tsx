@@ -20,13 +20,12 @@ const projects = [
     link: 'https://cca-cmrit.vercel.app',
     github: 'https://github.com/vishwaksen21/CCA-WEBSITE',
     description:
-      'Developed the official club website for Centre For Cognitive Activities (CCA) at CMRIT to showcase events, announcements, and achievements. The website features a modern, responsive design that works seamlessly across all devices, with smooth navigation and optimized performance for enhanced user experience.',
+      'Official website for Centre For Cognitive Activities (CCA) at CMRIT showcasing events and achievements.',
     technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Next.js'],
     highlights: [
-      'Delivered a responsive design compatible with multiple devices',
-      'Deployed the website for public access and maintenance',
-      'Implemented smooth navigation and optimized performance',
-      'Created dynamic content sections for events and announcements',
+      'Responsive design for all devices',
+      'Optimized performance and navigation',
+      'Dynamic content sections',
     ],
   },
   {
@@ -38,13 +37,12 @@ const projects = [
     link: 'https://vishwaksen.vercel.app',
     github: 'https://github.com/vishwaksen21/portfolio',
     description:
-      'Designed and developed a professional portfolio website to showcase projects and achievements with a focus on modern UI/UX principles. The site features smooth animations, interactive components, and is optimized for both performance and SEO to ensure faster load times and better search engine visibility.',
+      'Professional portfolio showcasing projects and achievements with modern UI/UX, animations, and SEO optimization.',
     technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Next.js', 'Framer Motion'],
     highlights: [
-      'Implemented smooth animations and interactive UI components',
-      'Optimized website performance and SEO',
-      'Deployed with version control for continuous updates',
-      'Created responsive design for all screen sizes',
+      'Smooth animations and interactive components',
+      'SEO and performance optimized',
+      'Fully responsive design',
     ],
   },
   {
@@ -55,80 +53,64 @@ const projects = [
     'data-ai-hint': 'billing software',
     github: 'https://github.com/vishwaksen21/Billing-System-with-MySQL-and-Tkinter',
     description:
-      'A comprehensive Java-based billing management system designed to streamline invoicing and payment processing for businesses. Features include automated billing cycles, customer data management, invoice generation, payment tracking, and detailed financial reporting with export capabilities.',
+      'Java-based billing system for automated invoicing, payment tracking, and financial reporting.',
     technologies: ['Java', 'Swing', 'MySQL', 'JDBC', 'JFrame'],
     highlights: [
-      'Developed intuitive GUI using Java Swing',
-      'Implemented robust database design with MySQL',
-      'Created automated billing and invoice generation features',
-      'Built comprehensive reporting and analytics dashboard',
+      'Intuitive GUI with Java Swing',
+      'Robust MySQL database design',
+      'Automated billing and reporting',
     ],
   },
   {
     id: 4,
-    title: 'Pulsar & Non-Pulsar Detection',
-    category: 'Machine Learning',
-    image: '/ml.png',
-    'data-ai-hint': 'space astronomy',
-    description:
-      'An advanced machine learning project focused on classifying celestial objects as pulsars or non-pulsars using radio telescope data. Developed a binary classification model with preprocessing, feature engineering, and training using multiple Scikit-learn algorithms including Random Forest, SVM, and Linear Regression for comparative analysis.',
-    technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
-    highlights: [
-      'Applied preprocessing and feature engineering techniques',
-      'Evaluated using confusion matrix, precision, recall, and F1-score',
-      'Visualized data distributions and model performance insights',
-      'Experimented with multiple algorithms for comparative analysis',
-    ],
-  },
-  {
-    id: 5,
     title: 'Student Management System',
     category: 'Software Development',
     image: '/student-management.png',
     'data-ai-hint': 'student database',
     github: 'https://github.com/vishwaksen21/Student-Management-System',
     description:
-      'Built a Python desktop application with Tkinter GUI to manage student records efficiently. The system integrates with MySQL database for secure storage and fast retrieval, featuring user-friendly dashboards and search functionality for efficient record management.',
+      'Python desktop app with Tkinter GUI for managing student records with MySQL database integration.',
     technologies: ['Python', 'Tkinter', 'MySQL'],
     highlights: [
-      'Designed user-friendly dashboards and search functionality',
-      'Implemented CRUD operations with input validation',
-      'Integrated MySQL database for secure data storage',
-      'Built fee and marks management modules',
+      'User-friendly dashboards and search',
+      'CRUD operations with validation',
+      'Fee and marks management modules',
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: 'Automated Face Recognition Attendance System',
     category: 'Machine Learning',
     image: '/attendance.png',
     'data-ai-hint': 'face recognition attendance',
+    github: 'https://github.com/vishwaksen21/Automated-attendance',
     description:
-      'Designed a face recognition system to automate student attendance tracking. The system includes modules for face capture, dataset creation, and model training, with real-time detection capabilities to generate CSV-based attendance reports. Features a simple GUI for registration, attendance marking, and record viewing.',
+      'Face recognition system to automate student attendance with real-time detection and CSV report generation.',
     technologies: ['Python', 'OpenCV', 'Tkinter', 'NumPy', 'Pandas'],
     highlights: [
-      'Designed face recognition system to automate student attendance',
-      'Built modules for face capture data set creation and model training',
-      'Implemented real-time detection to generate CSV based attendance report',
-      'Designed simple GUI for registration, attendance and record viewing',
+      'Real-time face detection and recognition',
+      'Automated CSV-based attendance reports',
+      'GUI for registration and record viewing',
     ],
   },
   {
-    id: 7,
-    title: 'BlueConnect',
-    category: 'Web Development',
-    image: '/BlueConnect.png',
-    'data-ai-hint': 'service platform',
-    description:
-      'BlueConnect is an innovative platform that bridges the gap between blue-collar workers and service seekers. The application features a modern tech stack with Next.js for optimal performance, allowing workers to showcase their skills through portfolios, negotiate prices directly with clients, and manage service requests. The platform includes three distinct interfaces: admin dashboard for platform management, worker portal for service listing, and client interface for service discovery and booking.',
-    technologies: ['Next.js', 'React', 'TypeScript', 'MongoDB', 'Tailwind CSS', 'Node.js'],
-    highlights: [
-      'Built scalable full-stack application with modern tech stack',
-      'Implemented real-time price negotiation system',
-      'Created role-based dashboards for three user types',
-      'Designed intuitive UI/UX for seamless user experience',
-    ],
-  },
+  id: 6,
+  title: 'Cure-Blend',
+  category: 'AI & ML Development',
+  image: '/CureBlend.png',
+  'data-ai-hint': 'medical recommendation system',
+  description:
+    'An AI-powered system that predicts diseases from symptoms and provides blended herbal and pharmaceutical treatment suggestions.',
+  technologies: [
+    'Python','Machine Learning','Streamlit','Scikit-learn','Pandas',
+  ],
+  highlights: [
+    'Symptom-based disease prediction using ML models',
+    'Dual treatment recommendations with safety notes',
+    'Explainability insights for model predictions',
+    'Clean and interactive Streamlit UI'
+  ],
+}
 ];
 
 export type Project = (typeof projects)[0];
