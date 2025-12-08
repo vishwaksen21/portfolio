@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="bg-background">
       <Hero />
-      <Stats />
       <About />
-      <Experience />
-      <Education />
-      <Achievements />
-      <Portfolio />
       <Skills />
+      <Experience />
+      <Portfolio />
+      <Achievements />
+      <Education />
+      <Stats />
       <Contact />
     </div>
   );

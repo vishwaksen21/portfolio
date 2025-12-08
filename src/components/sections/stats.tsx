@@ -61,13 +61,13 @@ export function Stats() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="grid grid-cols-1 gap-8 sm:gap-6 xs:grid-cols-3"
+          className="grid grid-cols-2 gap-6 sm:gap-6 sm:grid-cols-4"
         >
           {stats.map((stat) => (
             <motion.div key={stat.label} variants={itemVariants}>
               <Card className="text-center border-0 shadow-none bg-transparent">
                 <CardContent className="flex flex-col items-center justify-center p-0">
-                  <p className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">
                     {stat.value}
                   </p>
                   <p className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</p>

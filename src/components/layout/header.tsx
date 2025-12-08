@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -53,6 +53,17 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="hidden md:flex gap-2"
+            asChild
+          >
+            <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="h-4 w-4" />
+              Resume
+            </Link>
+          </Button>
           <ThemeSwitcher />
           <div className="flex items-center md:hidden">
               <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
@@ -86,6 +97,17 @@ export function Header() {
                           {link.label}
                         </Link>
                       ))}
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full gap-2 mt-4"
+                        asChild
+                      >
+                        <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer">
+                          <Download className="h-4 w-4" />
+                          Download Resume
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </SheetContent>

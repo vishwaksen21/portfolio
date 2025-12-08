@@ -55,13 +55,36 @@ export function Contact() {
     >
       <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">Contact</p>
+          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">Let's Work Together</p>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl px-4">Get In Touch</h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            I'm always open to discussing new projects, creative ideas, or opportunities.
+            Ready to collaborate? Reach out for opportunities, projects, or just to connect!
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+            <Button
+              size="lg"
+              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              asChild
+            >
+              <Link href="mailto:chilukurvishwak21@gmail.com">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Me
+              </Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              asChild
+            >
+              <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="mr-2 h-5 w-5" />
+                Connect on LinkedIn
+              </Link>
+            </Button>
+          </div>
           <Card className="border-muted shadow-xl">
             <CardContent className="p-6 md:p-8 space-y-6">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 p-4 rounded-lg bg-muted/30">

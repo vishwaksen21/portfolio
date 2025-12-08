@@ -16,10 +16,13 @@ export function About() {
     >
       <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">About Me</p>
+          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">Professional Summary</p>
           <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl px-4">
-            A Glimpse Into My World
+            About Me
           </h2>
+          <p className="mt-3 md:mt-4 text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 font-medium">
+            Full Stack Developer | AI/ML Enthusiast | ISRO Intern | 9.12 CGPA
+          </p>
         </div>
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 md:gap-12 lg:grid-cols-2 items-center">

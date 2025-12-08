@@ -1,5 +1,6 @@
 import { Separator } from "../ui/separator";
 import Link from "next/link";
+import { Linkedin, Github, Mail, Download } from "lucide-react";
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -7,6 +8,12 @@ const footerLinks = [
   { href: "/portfolio", label: "Work" },
   { href: "/skills", label: "Skills" },
   { href: "/contact", label: "Contact" },
+];
+
+const socialLinks = [
+  { href: "https://www.linkedin.com/in/c-vishwak-sena-b61212286/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/vishwaksen21/", icon: Github, label: "GitHub" },
+  { href: "mailto:chilukurvishwak21@gmail.com", icon: Mail, label: "Email" },
 ];
 
 export function Footer() {
@@ -25,6 +32,29 @@ export function Footer() {
               </Link>
             ))}
           </nav>
+          <div className="flex items-center gap-4">
+            {socialLinks.map((social) => (
+              <Link
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                aria-label={social.label}
+              >
+                <social.icon className="h-4 w-4" />
+              </Link>
+            ))}
+            <Link
+              href="/1CR23CD017_C Vishwak Sena_Resume_.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
+              aria-label="Download Resume"
+            >
+              <Download className="h-4 w-4" />
+            </Link>
+          </div>
           <Separator className="w-24" />
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} C Vishwak Sena. All Rights Reserved.

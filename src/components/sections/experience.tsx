@@ -9,7 +9,8 @@ const experiences = [
   {
     role: 'Software Intern',
     company: 'ISRO - Sriharikota',
-    period: '3 Months',
+    period: 'Jun 2025 - Aug 2025',
+    duration: '3 Months',
     location: 'Sriharikota, India',
     type: 'Internship',
     description: [
@@ -22,6 +23,7 @@ const experiences = [
   role: 'Software Intern',
   company: 'Quabyt Technologies',
   period: 'Sep 2025 - Dec 2025',
+  duration: '4 Months',
   location: 'India',
   type: 'Internship',
   description: [
@@ -34,7 +36,8 @@ const experiences = [
   {
     role: 'Technical Lead',
     company: 'Center for Cognitive Activities - CMRIT',
-    period: 'April 2025 - Present',
+    period: 'Apr 2025 - Present',
+    duration: '8+ Months',
     location: 'Bengaluru, India',
     type: 'Leadership',
     description: [
@@ -45,7 +48,8 @@ const experiences = [
   {
     role: 'Event Management Head',
     company: 'Innovation Club - CMRIT',
-    period: '2025 - Present',
+    period: 'Jan 2025 - Present',
+    duration: '11+ Months',
     location: 'Bengaluru, India',
     type: 'Leadership',
     description: [
@@ -116,7 +120,7 @@ export function Experience() {
                           <Calendar className="h-4 w-4" />
                           <span>{exp.period}</span>
                           <span>•</span>
-                          <span>{exp.location}</span>
+                          <span className="font-medium text-primary">{exp.duration}</span>
                         </div>
                       </div>
                     </div>

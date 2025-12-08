@@ -107,19 +107,19 @@ export function Skills() {
           <motion.div variants={itemVariants}>
             <Card className='border-muted shadow-lg'>
               <CardHeader>
-                <CardTitle className="text-2xl">Technical Skills</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl">Technical Skills</CardTitle>
               </CardHeader>
               <CardContent>
                 <TooltipProvider>
-                  <div className="flex flex-wrap gap-4 justify-center">
+                  <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
                     {skills.map((skill) => (
                       <Tooltip key={skill.name}>
                         <TooltipTrigger asChild>
-                           <div className="flex flex-col items-center justify-center gap-2 w-20 h-20 sm:w-24 sm:h-24 bg-muted/30 rounded-xl transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 cursor-pointer p-3 border border-muted">
-                              <div className="w-8 h-8">
+                           <div className="flex flex-col items-center justify-center gap-1.5 sm:gap-2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-muted/30 rounded-xl transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 cursor-pointer p-2 sm:p-3 border border-muted">
+                              <div className="w-6 h-6 sm:w-8 sm:h-8">
                                 {skill.icon}
                               </div>
-                              <span className="text-xs font-medium text-center">{skill.name}</span>
+                              <span className="text-[10px] sm:text-xs font-medium text-center leading-tight">{skill.name}</span>
                             </div>
                         </TooltipTrigger>
                         <TooltipContent>
