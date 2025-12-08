@@ -48,7 +48,7 @@ const experiences = [
   {
     role: 'Event Management Head',
     company: 'Innovation Club - CMRIT',
-    period: 'Jan 2025 - Present',
+    period: 'Nov 2025 - Present',
     duration: '11+ Months',
     location: 'Bengaluru, India',
     type: 'Leadership',
