@@ -62,10 +62,10 @@ export function Contact() {
           </p>
         </div>
         <div className="max-w-3xl mx-auto space-y-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto min-h-[48px]"
               asChild
             >
               <Link href="mailto:chilukurvishwak21@gmail.com">
@@ -76,7 +76,7 @@ export function Contact() {
             <Button
               size="lg"
               variant="outline"
-              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto min-h-[48px]"
               asChild
             >
               <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/" target="_blank" rel="noopener noreferrer">

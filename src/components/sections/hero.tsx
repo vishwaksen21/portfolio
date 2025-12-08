@@ -115,11 +115,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col gap-3 w-full sm:w-auto sm:flex-row sm:flex-wrap md:gap-4"
+              className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4"
             >
               <Button
                 size="lg"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto"
+                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
                 asChild
               >
                 <Link href="/portfolio">View My Work</Link>
@@ -127,7 +127,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto"
+                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
                 asChild
               >
                 <Link href="/contact">Let's Connect</Link>
@@ -135,7 +135,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto"
+                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
                 asChild
               >
                 <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer">

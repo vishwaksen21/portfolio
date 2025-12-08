@@ -77,33 +77,35 @@ export function Header() {
                   <SheetHeader>
                     <SheetTitle className="sr-only">Menu</SheetTitle>
                   </SheetHeader>
-                  <Link href="/" className="flex items-center space-x-2 p-6">
+                  <Link href="/" className="flex items-center space-x-2 p-6 border-b border-muted">
                     <span className="font-semibold text-lg">
                       Portfolio
                     </span>
                   </Link>
-                  <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-                    <div className="flex flex-col space-y-4">
+                  <div className="my-6 px-6 space-y-1">
+                    <div className="flex flex-col space-y-3">
                       {navLinks.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
                           onClick={() => setSheetOpen(false)}
                            className={cn(
-                            "text-foreground text-base font-medium transition-colors hover:text-primary",
+                            "text-foreground text-base font-medium transition-colors hover:text-primary py-2",
                              pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"
                            )}
                         >
                           {link.label}
                         </Link>
                       ))}
+                    </div>
+                    <div className="pt-6 border-t border-muted mt-6">
                       <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full gap-2 mt-4"
+                        variant="default"
+                        size="lg"
+                        className="w-full gap-2"
                         asChild
                       >
-                        <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer">
+                        <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setSheetOpen(false)}>
                           <Download className="h-4 w-4" />
                           Download Resume
                         </Link>
