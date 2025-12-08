@@ -37,7 +37,6 @@ const experiences = [
     role: 'Technical Lead',
     company: 'Center for Cognitive Activities - CMRIT',
     period: 'Apr 2025 - Present',
-    duration: '8+ Months',
     location: 'Bengaluru, India',
     type: 'Leadership',
     description: [
@@ -49,7 +48,6 @@ const experiences = [
     role: 'Event Management Head',
     company: 'Innovation Club - CMRIT',
     period: 'Nov 2025 - Present',
-    duration: '11+ Months',
     location: 'Bengaluru, India',
     type: 'Leadership',
     description: [
