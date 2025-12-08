@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -12,36 +12,24 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#education", label: "Education" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#portfolio", label: "Work" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/experience", label: "Experience" },
+  { href: "/education", label: "Education" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/portfolio", label: "Work" },
+  { href: "/skills", label: "Skills" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const pathname = usePathname();
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      setSheetOpen(false);
-    }
-  };
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center px-4">
         <div className="mr-auto flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-             <Mountain className="h-5 w-5 text-primary" />
             <span className="font-semibold text-base md:text-lg">
               Portfolio
             </span>
@@ -53,7 +41,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
+                onClick={() => setSheetOpen(false)}
                 className={cn(
                   "transition-colors hover:text-primary",
                   pathname === link.href ? "text-primary font-semibold" : "text-foreground/70"
@@ -79,7 +67,6 @@ export function Header() {
                     <SheetTitle className="sr-only">Menu</SheetTitle>
                   </SheetHeader>
                   <Link href="/" className="flex items-center space-x-2 p-6">
-                    <Mountain className="h-5 w-5 text-primary" />
                     <span className="font-semibold text-lg">
                       Portfolio
                     </span>
@@ -90,7 +77,7 @@ export function Header() {
                         <Link
                           key={link.href}
                           href={link.href}
-                          onClick={(e) => handleNavClick(e, link.href)}
+                          onClick={() => setSheetOpen(false)}
                            className={cn(
                             "text-foreground text-base font-medium transition-colors hover:text-primary",
                              pathname === link.href ? "text-primary font-semibold" : "text-foreground/80"

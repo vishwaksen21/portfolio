@@ -1,11 +1,31 @@
-
 import { Separator } from "../ui/separator";
+import Link from "next/link";
+
+const footerLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/portfolio", label: "Work" },
+  { href: "/skills", label: "Skills" },
+  { href: "/contact", label: "Contact" },
+];
 
 export function Footer() {
   return (
     <footer className="py-8 md:py-12 bg-muted/30 border-t">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-6 text-center">
+          <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Separator className="w-24" />
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} C Vishwak Sena. All Rights Reserved.
           </p>
