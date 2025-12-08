@@ -99,6 +99,7 @@ const projects = [
   category: 'AI & ML Development',
   image: '/CureBlend.png',
   'data-ai-hint': 'medical recommendation system',
+  github: 'https://github.com/vishwaksen21/Cure-Blend',
   description:
     'An AI-powered system that predicts diseases from symptoms and provides blended herbal and pharmaceutical treatment suggestions.',
   technologies: [
