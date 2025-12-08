@@ -60,7 +60,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} C Vishwak Sena. All Rights Reserved.
           </p>
           <p className="text-xs text-muted-foreground/70">
-            Built with Next.js, TypeScript, and Tailwind CSS
+            1CR23CD017, CMR Institute of Technology
           </p>
         </div>
       </div>
