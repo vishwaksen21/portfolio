@@ -41,9 +41,9 @@ export function Experience() {
           <h2 className="text-3xl font-bold text-foreground">Professional Journey</h2>
         </div>
         <div className="max-w-3xl mx-auto">
-          <div className="relative pl-8 space-y-8">
+          <div className="relative pl-10 space-y-8">
             {/* Vertical line */}
-            <div className="absolute left-0 top-2 bottom-2 w-0.5 bg-primary/30" />
+            <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-primary/30" />
             
             {experiences.map((exp, index) => (
               <motion.div
@@ -55,7 +55,7 @@ export function Experience() {
                 className="relative"
               >
                 {/* Dot */}
-                <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                <div className="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
                 
                 {/* Content */}
                 <div className="pb-2">
