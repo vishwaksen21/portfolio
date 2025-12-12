@@ -41,10 +41,7 @@ export function Experience() {
           <h2 className="text-3xl font-bold text-foreground">Professional Journey</h2>
         </div>
         <div className="max-w-3xl mx-auto">
-          <div className="relative pl-10 space-y-8">
-            {/* Vertical line */}
-            <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-primary/30" />
-            
+          <div className="relative border-l-2 border-primary/30 ml-2">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -52,13 +49,13 @@ export function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
+                className="relative pl-8 pb-8 last:pb-0"
               >
-                {/* Dot */}
-                <div className="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                {/* Dot - centered on the line */}
+                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
                 
                 {/* Content */}
-                <div className="pb-2">
+                <div>
                   <p className="text-xs text-muted-foreground font-medium mb-1">{exp.period}</p>
                   <h3 className="text-lg font-bold text-foreground mb-2">{exp.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
