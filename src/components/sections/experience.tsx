@@ -1,8 +1,6 @@
 'use client';
 
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const experiences = [
@@ -10,73 +8,27 @@ const experiences = [
     role: 'Software Intern',
     company: 'ISRO - Sriharikota',
     period: 'Jun 2025 - Aug 2025',
-    duration: '3 Months',
-    location: 'Sriharikota, India',
-    type: 'Internship',
-    description: [
-      'Developed ML project on meteorological datasets, improving model accuracy by 12%',
-      'Designed ML pipelines for data processing and evaluation',
-      'Rated "Very Good" by ISRO Group Director, MSG Division',
-    ],
+    description: 'Developed ML project on meteorological datasets',
   },
   {
-  role: 'Software Intern',
-  company: 'Quabyt Technologies',
-  period: 'Sep 2025 - Dec 2025',
-  duration: '4 Months',
-  location: 'India',
-  type: 'Internship',
-  description: [
-    'Selected for a Software Intern role at Quabyt Tech',
-    'Contributed to innovative software development projects with cross-functional teams',
-    'Gained hands-on experience working with industry professionals and mentors',
-    'Participated in training and development programs to strengthen technical and professional skills',
-  ],
-},
+    role: 'Software Intern',
+    company: 'Quabyt Technologies',
+    period: 'Sep 2025 - Dec 2025',
+    description: 'Contributed to software development projects',
+  },
   {
     role: 'Technical Lead',
     company: 'Center for Cognitive Activities - CMRIT',
     period: 'Apr 2025 - Present',
-    location: 'Bengaluru, India',
-    type: 'Leadership',
-    description: [
-      'Leading technical team for college-wide events',
-      'Managed logistics for Express & Impress and MindSpeak',
-    ],
+    description: 'Leading technical team for college events',
   },
   {
     role: 'Event Management Head',
     company: 'Innovation Club - CMRIT',
     period: 'Nov 2025 - Present',
-    location: 'Bengaluru, India',
-    type: 'Leadership',
-    description: [
-      'Planning innovation-focused activities and workshops',
-      'Organizing technical sessions for skill development',
-    ],
+    description: 'Organizing innovation activities and workshops',
   },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
 
 export function Experience() {
   return (
@@ -95,52 +47,28 @@ export function Experience() {
             Professional Journey
           </h2>
         </div>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-3xl mx-auto space-y-6">
           {experiences.map((exp, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="border-muted shadow-lg mb-6">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-lg bg-primary/10">
-                        <Briefcase className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                        <p className="text-base text-muted-foreground font-medium">{exp.company}</p>
-                        <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4" />
-                          <span>{exp.period}</span>
-                          <span>•</span>
-                          <span className="font-medium text-primary">{exp.duration}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-muted rounded-full text-foreground">
-                      {exp.type}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {exp.description.map((item, idx) => (
-                      <li key={idx} className="flex items-start text-muted-foreground">
-                        <span className="text-primary mr-2 mt-1">▸</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors"
+            >
+              <div className="p-2 rounded-lg bg-primary/10 mt-1">
+                <Briefcase className="h-5 w-5 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground">{exp.role}</h3>
+                <p className="text-sm text-muted-foreground font-medium">{exp.company}</p>
+                <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
+                <p className="text-sm text-foreground/80 mt-2">{exp.description}</p>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
