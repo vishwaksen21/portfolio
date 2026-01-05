@@ -99,6 +99,7 @@ const projects = [
   category: 'AI & ML Development',
   image: '/CureBlend.png',
   'data-ai-hint': 'medical recommendation system',
+  link: 'https://cureblend.streamlit.app',
   github: 'https://github.com/vishwaksen21/Cure-Blend',
   description:
     'AI-powered disease prediction system with 87% accuracy, analyzing 40+ diseases and providing dual treatment recommendations.',
