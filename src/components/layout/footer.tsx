@@ -46,7 +46,7 @@ export function Footer() {
               </Link>
             ))}
             <Link
-              href="/1CR23CD017_C Vishwak Sena_Resume_.pdf"
+              href="/1CR23CD017_C Vishwak Sena_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"

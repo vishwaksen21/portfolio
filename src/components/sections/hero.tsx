@@ -138,7 +138,7 @@ export function Hero() {
                 className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
                 asChild
               >
-                <Link href="/1CR23CD017_C Vishwak Sena_Resume_.pdf" target="_blank" rel="noopener noreferrer">
+                <Link href="/1CR23CD017_C Vishwak Sena_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </Link>
