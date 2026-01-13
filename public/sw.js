@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vishwak-portfolio-v1';
+const CACHE_NAME = 'vishwak-portfolio-v2';
 const urlsToCache = [
   '/',
   '/about',
