@@ -58,7 +58,7 @@ export function Header() {
             className="hidden md:flex gap-2"
             asChild
           >
-            <Link href="/vishwakresume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/vishwakresume.pdf" target="_blank" rel="noopener noreferrer" download="C_Vishwak_Sena_Resume.pdf">
               <Download className="h-4 w-4" />
               Resume
             </Link>
@@ -104,7 +104,7 @@ export function Header() {
                         className="w-full gap-2"
                         asChild
                       >
-                        <Link href="/vishwakresume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setSheetOpen(false)}>
+                        <Link href="/vishwakresume.pdf" target="_blank" rel="noopener noreferrer" download="C_Vishwak_Sena_Resume.pdf" onClick={() => setSheetOpen(false)}>
                           <Download className="h-4 w-4" />
                           Download Resume
                         </Link>

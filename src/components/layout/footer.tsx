@@ -49,6 +49,7 @@ export function Footer() {
               href="/vishwakresume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              download="C_Vishwak_Sena_Resume.pdf"
               className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
               aria-label="Download Resume"
             >
