@@ -45,15 +45,14 @@ export function Footer() {
                 <social.icon className="h-4 w-4" />
               </Link>
             ))}
-            <Link
+            <a
               href="/vishwakresume.pdf"
-              target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
               aria-label="Download Resume"
             >
               <Download className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
           <Separator className="w-24" />
           <p className="text-sm text-muted-foreground">
