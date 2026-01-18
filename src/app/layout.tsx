@@ -63,11 +63,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/icons/icon-32x32.png',
-    shortcut: '/icons/icon-32x32.png',
-    apple: '/icons/icon-192x192.png',
-  },
   verification: {
     google: 'your-google-verification-code',
   },
@@ -89,9 +84,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Vishwak" />
-        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png" />
         {/* Service Worker Registration */}
         <script
           dangerouslySetInnerHTML={{
