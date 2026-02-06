@@ -7,7 +7,7 @@ A modern, responsive portfolio showcasing my projects, skills, and professional 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
 
-🔗 **Live Demo:** [vishwaksen.vercel.app](https://vishwaksen.vercel.app)
+🔗 **Live Demo:** [vishwaksen.vercel.app](https://vishwaksen.vercel.app/)
 
 ---
 
