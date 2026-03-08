@@ -74,6 +74,15 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  async redirects() {
+    return [
+      {
+        source: '/vishwakresume.pdf',
+        destination: '/1CR23CD017_C%20VISHWAK%20SENA_RESUME.pdf',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -46,7 +46,7 @@ export function Footer() {
               </Link>
             ))}
             <a
-              href="/1CR23CD017_C VISHWAK SENA_RESUME.pdf"
+              href="/1CR23CD017_C%20VISHWAK%20SENA_RESUME.pdf"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
               aria-label="Download Resume"
