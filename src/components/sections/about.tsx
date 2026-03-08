@@ -21,7 +21,7 @@ export function About() {
             About Me
           </h2>
           <p className="mt-3 md:mt-4 text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 font-medium">
-            Full Stack Developer | AI/ML Enthusiast | ISRO Intern | 9.12 CGPA
+            AI/ML Enthusiast | 4+ Internships | 9.06 CGPA | SPC - CMRIT
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -56,12 +56,12 @@ export function About() {
                 <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3">Career Objective</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   Computer Science student specializing in Data Science with strong programming and problem-solving skills. 
-                  Passionate about leveraging technology to solve real-world challenges through machine learning and full-stack development.
+                  Passionate about leveraging technology to solve real-world challenges through machine learning and data analytics.
                 </p>
               </div>
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                Maintaining a CGPA of 9.12/10 at CMR Institute of Technology with expertise in Python, C++, Java, 
-                and modern web technologies.
+                Maintaining a CGPA of 9.06/10 at CMR Institute of Technology with expertise in Python, Java, 
+                and modern web technologies, and serving as Student Placement Coordinator @ CMRIT
               </p>
             </motion.div>
           </div>
