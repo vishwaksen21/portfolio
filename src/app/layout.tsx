@@ -16,8 +16,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'C Vishwak Sena | Portfolio - Computer Science & Data Science Student',
-  description: 'Portfolio of C Vishwak Sena - Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Python, Java, C++, Machine Learning, and Full-Stack Development. CGPA: 9.12/10. ISRO Intern.',
-  keywords: ['C Vishwak Sena', 'Portfolio', 'Computer Science', 'Data Science', 'Machine Learning', 'Python Developer', 'Full Stack Developer', 'CMRIT', 'ISRO Intern', 'Web Development', 'React', 'Next.js'],
+  description: 'Portfolio of C Vishwak Sena - Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Python, Java, C++, Machine Learning, and Full-Stack Development. CGPA: 9.06/10. ISRO Intern.',
+  keywords: ['C Vishwak Sena', 'Portfolio', 'Computer Science', 'Data Science', 'Machine Learning', 'Python Developer', 'CMRIT', 'ISRO Intern', 'Web Development', 'React', 'Next.js'],
   authors: [{ name: 'C Vishwak Sena' }],
   creator: 'C Vishwak Sena',
   publisher: 'C Vishwak Sena',
