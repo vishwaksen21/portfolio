@@ -5,7 +5,7 @@ export const metadata = {
   description: 'View my portfolio of projects including web development, AI/ML applications, and full-stack solutions.',
   openGraph: {
     title: 'Portfolio - Vishwak Sen Tadigotla',
-    description: 'View my portfolio of projects including web development, AI/ML applications, and full-stack solutions.',
+    description: 'View my portfolio of projects including web development and AI/ML applications',
     url: 'https://vishwaksen.vercel.app/portfolio',
   },
 };
