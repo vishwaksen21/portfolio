@@ -186,12 +186,12 @@ export function Portfolio() {
             transition={{ duration: 0.6 }}
             className="mb-24"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 border-2 md:border-4 border-ink bg-canvas shadow-blueprint relative group">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-2 md:border-4 border-ink bg-canvas shadow-blueprint relative group">
               <div className="absolute -top-3 -right-3 bg-accent text-canvas text-[10px] font-bold tracking-widest uppercase py-1 px-3 border-2 border-ink z-20">
                 Featured 01
               </div>
 
-              <div className="lg:col-span-7 relative aspect-video lg:aspect-[4/3] w-full border-b-2 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[300px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
+              <div className="lg:col-span-7 relative aspect-video lg:aspect-auto lg:h-full w-full border-b-2 md:border-b-4 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[250px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
                 <Image
                   src={featuredProject.image}
                   alt={featuredProject.title}
@@ -205,7 +205,7 @@ export function Portfolio() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 p-8 flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-5 p-4 md:p-8 flex flex-col justify-between space-y-6">
                 <div>
                   <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">
                     {featuredProject.category}
@@ -217,7 +217,7 @@ export function Portfolio() {
                     {featuredProject.description}
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div>
                       <p className="text-[10px] font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-1 mb-2 inline-block">The Problem</p>
                       <p className="text-xs text-ink-secondary font-medium leading-relaxed">
