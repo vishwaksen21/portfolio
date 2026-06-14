@@ -160,23 +160,23 @@ export function Portfolio() {
   return (
     <>
       <motion.section
-        id="portfolio"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.8 }}
-        className="py-12 md:py-16 lg:py-20 bg-paper border-b-4 border-ink relative"
-      >
+      id="portfolio"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8 }}
+      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
+    >
         <div className="absolute inset-0 bg-blueprint opacity-30 pointer-events-none" />
 
         <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
 
-          <div className="flex items-center gap-4 mb-16">
-            <div className="h-4 w-4 bg-accent"></div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
-              Case Studies
-            </h2>
-          </div>
+          <div className="flex items-center gap-4 mb-12 md:mb-16">
+          <div className="h-4 w-4 bg-accent"></div>
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+            The Work
+          </h2>
+        </div>
 
           {/* Featured Project */}
           <motion.div
@@ -210,7 +210,7 @@ export function Portfolio() {
                   <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">
                     {featuredProject.category}
                   </p>
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-ink uppercase leading-tight mb-4">
+                  <h3 className="font-display text-2xl md:text-4xl font-bold text-ink uppercase leading-tight mb-4">
                     {featuredProject.title}
                   </h3>
                   <p className="text-ink-secondary text-sm md:text-base font-medium leading-relaxed mb-6">

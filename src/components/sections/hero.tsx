@@ -63,7 +63,7 @@ export function Hero() {
                     transition: { staggerChildren: 0.2, delayChildren: 0.3 }
                   }
                 }}
-                className="font-display text-[2.75rem] leading-[0.9] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
+                className="font-display text-4xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
               >
                 <motion.span 
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
@@ -86,10 +86,10 @@ export function Hero() {
               </motion.h1>
               
               <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-base md:text-lg lg:text-xl max-w-xl leading-relaxed text-ink-secondary font-medium"
+                className="text-sm sm:text-base md:text-lg lg:text-xl max-w-xl leading-relaxed text-ink-secondary font-medium border-l-4 border-accent pl-4"
               >
                 I am <strong className="text-ink font-bold">C Vishwak Sena</strong>, a Computer Science & Data Science student. I build data-driven solutions and intelligent systems with Python, C, and Java.
               </motion.p>

@@ -51,7 +51,7 @@ export function Contact() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8 }}
-      className="py-12 md:py-16 lg:py-20 bg-[#1F232B] border-b-4 border-ink relative text-canvas"
+      className="py-8 md:py-16 lg:py-20 bg-[#1F232B] border-b-4 border-ink relative text-canvas"
     >
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
         backgroundImage: 'linear-gradient(#E1D4C8 1px, transparent 1px), linear-gradient(90deg, #E1D4C8 1px, transparent 1px)',
@@ -60,14 +60,14 @@ export function Contact() {
       
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
-          <div className="space-y-8">
-            <div className="inline-flex items-center px-3 py-1 border-2 border-canvas/30 text-xs font-bold tracking-widest uppercase text-canvas mb-4">
+          <div className="space-y-6">
+            <div className="inline-flex items-center px-3 py-1 border-2 border-canvas/30 text-[10px] font-bold tracking-widest uppercase text-canvas mb-4">
               Comm. Channel
             </div>
             
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
               INITIATE <br />
               <span className="text-accent">CONTACT.</span>
             </h2>

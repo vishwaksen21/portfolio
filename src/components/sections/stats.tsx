@@ -69,7 +69,7 @@ export function Stats() {
               key={stat.label} 
               variants={itemVariants}
               className={cn(
-                "p-8 flex flex-col justify-center items-center text-center relative border-ink",
+                "p-6 md:p-8 flex flex-col justify-center items-center text-center relative border-ink",
                 index !== 3 && "border-b-4 lg:border-b-0",
                 index === 2 && "md:border-b-0",
                 (index === 0 || index === 2) && "md:border-r-4",

@@ -71,12 +71,12 @@ export function Achievements() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
-      className="py-12 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
+      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
     >
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-12 md:mb-16">
           <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             Milestones
           </h2>
         </div>

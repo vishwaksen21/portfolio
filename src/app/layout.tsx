@@ -75,6 +75,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#F3ECE5',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -83,10 +91,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${libreBodoni.variable}`}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         {/* PWA Meta Tags */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#F3ECE5" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -108,7 +114,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cn('antialiased min-h-screen bg-blueprint flex flex-col text-base sm:text-base')} suppressHydrationWarning>
+      <body className={cn('antialiased min-h-screen bg-blueprint flex flex-col text-base sm:text-base overflow-x-hidden')} suppressHydrationWarning>
         <div className="w-full">
           <Header />
           <main className="flex-1 w-full">{children}</main>
