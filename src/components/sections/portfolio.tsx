@@ -191,7 +191,7 @@ export function Portfolio() {
                 Featured 01
               </div>
 
-              <div className="lg:col-span-7 relative border-b-4 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[300px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
+              <div className="relative aspect-video lg:aspect-[4/3] w-full border-b-2 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[300px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
                 <Image
                   src={featuredProject.image}
                   alt={featuredProject.title}
@@ -245,8 +245,14 @@ export function Portfolio() {
           </motion.div>
 
           {/* Supporting Projects */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-            <AnimatePresence>
+          <div className="mt-12 md:mt-24">
+            <h3 className="font-display text-xl md:text-3xl font-bold tracking-tight text-ink uppercase mb-6 md:mb-12">
+              Other Selected Works
+            </h3>
+            
+            {/* Horizontal Scroll on Mobile, Grid on Desktop */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:snap-none md:gap-8 md:mx-0 md:px-0 hide-scrollbar">
+              <AnimatePresence>
               {supportingProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
@@ -254,10 +260,10 @@ export function Portfolio() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group cursor-pointer flex flex-col h-full border-2 md:border-4 border-ink bg-canvas shadow-blueprint hover:-translate-y-2 transition-transform duration-300 active:scale-[0.98]"
+                  className="min-w-[85vw] snap-center md:min-w-0 group cursor-pointer flex flex-col h-full border-2 md:border-4 border-ink bg-canvas shadow-blueprint hover:-translate-y-2 transition-transform duration-300 active:scale-[0.98]"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <div className="relative aspect-[4/3] border-b-4 border-ink overflow-hidden bg-canvas">
+                  <div className="relative aspect-video border-b-2 md:border-b-4 border-ink overflow-hidden bg-canvas">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -293,6 +299,7 @@ export function Portfolio() {
                 </motion.div>
               ))}
             </AnimatePresence>
+            </div>
           </div>
 
         </div>

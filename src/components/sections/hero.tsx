@@ -145,7 +145,7 @@ export function Hero() {
             </motion.div>
           </div>
           
-          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
+          <div className="lg:col-span-5 hidden md:flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
             <motion.div 
               className="relative w-full max-w-sm"
               initial={{ opacity: 0, x: 20 }}
