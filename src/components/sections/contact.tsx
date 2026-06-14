@@ -51,7 +51,7 @@ export function Contact() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8 }}
-      className="py-8 md:py-16 lg:py-20 bg-[#1F232B] border-b-4 border-ink relative text-canvas"
+      className="py-8 md:py-12 bg-[#1F232B] border-b-4 border-ink relative text-canvas"
     >
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
         backgroundImage: 'linear-gradient(#E1D4C8 1px, transparent 1px), linear-gradient(90deg, #E1D4C8 1px, transparent 1px)',
@@ -60,14 +60,14 @@ export function Contact() {
       
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
-          <div className="space-y-6">
-            <div className="inline-flex items-center px-3 py-1 border-2 border-canvas/30 text-[10px] font-bold tracking-widest uppercase text-canvas mb-4">
+          <div className="space-y-4 md:space-y-6">
+            <div className="inline-flex items-center px-3 py-1 border-2 border-canvas/30 text-[10px] font-bold tracking-widest uppercase text-canvas mb-2">
               Comm. Channel
             </div>
             
-            <h2 className="font-display text-2xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase leading-[0.9]">
               INITIATE <br />
               <span className="text-accent">CONTACT.</span>
             </h2>
@@ -106,8 +106,8 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="border-2 md:border-4 border-canvas/20 bg-[#1A1D24] p-4 sm:p-6 md:p-12 shadow-blueprint">
-            <h3 className="text-xs font-bold tracking-widest uppercase text-canvas/50 mb-8 pb-4 border-b-2 border-canvas/10">
+          <div className="border-2 md:border-4 border-canvas/20 bg-[#1A1D24] p-4 sm:p-6 md:p-8 shadow-blueprint">
+            <h3 className="text-xs font-bold tracking-widest uppercase text-canvas/50 mb-6 pb-4 border-b-2 border-canvas/10">
               Direct Transmission Form
             </h3>
             
@@ -121,15 +121,15 @@ export function Contact() {
             }} className="space-y-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Identification</label>
-                <input type="text" name="subject" placeholder="Your Name" className="w-full h-12 md:h-14 bg-transparent border-b-2 border-canvas/30 px-2 text-sm md:text-base text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium" required />
+                <input type="text" name="subject" placeholder="Your Name" className="w-full h-10 md:h-12 bg-transparent border-b-2 border-canvas/30 px-2 text-sm text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium" required />
               </div>
               
               <div className="space-y-2">
                 <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Message Data</label>
-                <textarea name="body" rows={4} placeholder="Your Message" className="w-full bg-transparent border-b-2 border-canvas/30 p-2 py-4 text-sm md:text-base text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium resize-none" required></textarea>
+                <textarea name="body" rows={3} placeholder="Your Message" className="w-full bg-transparent border-b-2 border-canvas/30 p-2 py-2 text-sm text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium resize-none" required></textarea>
               </div>
 
-              <Button type="submit" size="lg" className="w-full h-12 md:h-14 rounded-none border-2 border-accent bg-accent text-canvas hover:bg-transparent hover:text-accent transition-colors font-bold tracking-widest uppercase mt-4">
+              <Button type="submit" size="lg" className="w-full h-10 md:h-12 rounded-none border-2 border-accent bg-accent text-canvas hover:bg-transparent hover:text-accent transition-colors font-bold tracking-widest uppercase mt-4">
                 Transmit Message
               </Button>
             </form>
