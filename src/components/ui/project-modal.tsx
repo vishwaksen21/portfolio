@@ -28,7 +28,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="relative bg-paper border-4 border-ink shadow-blueprint w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-none"
+        className="relative bg-paper border-2 md:border-4 border-ink shadow-blueprint w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-none"
         onClick={(e) => e.stopPropagation()}
       >
         <button

@@ -62,7 +62,7 @@ export function Stats() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-4 border-ink bg-canvas shadow-blueprint"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-2 md:border-4 border-ink bg-canvas shadow-blueprint"
         >
           {stats.map((stat, index) => (
             <motion.div 
@@ -70,7 +70,7 @@ export function Stats() {
               variants={itemVariants}
               className={cn(
                 "p-6 md:p-8 flex flex-col justify-center items-center text-center relative border-ink",
-                index !== 3 && "border-b-4 lg:border-b-0",
+                index !== 3 && "border-b-2 md:border-b-4 lg:border-b-0",
                 index === 2 && "md:border-b-0",
                 (index === 0 || index === 2) && "md:border-r-4",
                 index === 1 && "lg:border-r-4"

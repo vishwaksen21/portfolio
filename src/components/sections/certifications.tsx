@@ -48,7 +48,7 @@ export function Certifications() {
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         <div className="flex items-center gap-4 mb-12 md:mb-16">
           <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             Credentials
           </h2>
         </div>
@@ -61,7 +61,7 @@ export function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-4 border-ink bg-paper p-6 shadow-blueprint relative flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
+              className="border-2 md:border-4 border-ink bg-paper p-6 shadow-blueprint relative flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
             >
               <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
                 Ref. {index + 1}

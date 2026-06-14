@@ -71,7 +71,7 @@ export default {
         },
       },
       boxShadow: {
-        blueprint: '10px 10px 0px #1F2736',
+        blueprint: 'var(--blueprint-shadow)',
       },
       borderWidth: {
         '4': '4px',

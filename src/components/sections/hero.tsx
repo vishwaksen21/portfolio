@@ -63,7 +63,7 @@ export function Hero() {
                     transition: { staggerChildren: 0.2, delayChildren: 0.3 }
                   }
                 }}
-                className="font-display text-4xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
+                className="font-display text-3xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
               >
                 <motion.span 
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
@@ -129,7 +129,7 @@ export function Hero() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto h-14 rounded-none border-4 border-ink bg-ink text-canvas hover:bg-canvas hover:text-ink transition-colors font-bold tracking-widest uppercase shadow-blueprint"
+                className="w-full sm:w-auto h-14 rounded-none border-2 md:border-4 border-ink bg-ink text-canvas hover:bg-canvas hover:text-ink transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98]"
                 asChild
               >
                 <Link href="/portfolio">Explore Work</Link>
@@ -137,7 +137,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto h-14 rounded-none border-4 border-ink bg-canvas text-ink hover:bg-ink hover:text-canvas transition-colors font-bold tracking-widest uppercase shadow-blueprint"
+                className="w-full sm:w-auto h-14 rounded-none border-2 md:border-4 border-ink bg-canvas text-ink hover:bg-ink hover:text-canvas transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98]"
                 asChild
               >
                 <Link href="/contact">Let's Connect</Link>
@@ -152,11 +152,11 @@ export function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
-              <div className="relative border-4 border-ink bg-paper p-4 shadow-blueprint">
-                <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-ink" />
-                <div className="absolute -top-4 -right-4 w-8 h-8 border-t-4 border-r-4 border-ink" />
-                <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-4 border-l-4 border-ink" />
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-ink" />
+              <div className="relative border-2 md:border-4 border-ink bg-paper p-4 shadow-blueprint">
+                <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 md:border-t-4 border-l-2 md:border-l-4 border-ink" />
+                <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 md:border-t-4 border-r-2 md:border-r-4 border-ink" />
+                <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 md:border-b-4 border-l-2 md:border-l-4 border-ink" />
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 md:border-b-4 border-r-2 md:border-r-4 border-ink" />
                 
                 <div className="bg-canvas border-2 border-ink overflow-hidden aspect-[4/5] relative">
                   <Image

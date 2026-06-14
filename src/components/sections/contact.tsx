@@ -67,7 +67,7 @@ export function Contact() {
               Comm. Channel
             </div>
             
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
+            <h2 className="font-display text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
               INITIATE <br />
               <span className="text-accent">CONTACT.</span>
             </h2>
@@ -106,7 +106,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="border-4 border-canvas/20 bg-[#1A1D24] p-8 md:p-12 shadow-blueprint">
+          <div className="border-2 md:border-4 border-canvas/20 bg-[#1A1D24] p-6 md:p-12 shadow-blueprint">
             <h3 className="text-xs font-bold tracking-widest uppercase text-canvas/50 mb-8 pb-4 border-b-2 border-canvas/10">
               Direct Transmission Form
             </h3>

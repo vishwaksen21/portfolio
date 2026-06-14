@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <div className="sticky top-0 md:top-6 z-50 md:px-4 w-full flex justify-center pointer-events-none">
-      <header className="pointer-events-auto w-full max-w-[1200px] border-b-4 md:border-4 border-ink bg-paper/95 backdrop-blur-md shadow-none md:shadow-blueprint transition-all duration-300">
+      <header className="pointer-events-auto w-full max-w-[1200px] border-b-2 md:border-4 border-ink border-b-accent md:border-b-ink bg-paper/95 backdrop-blur-md shadow-none md:shadow-blueprint transition-all duration-300">
         <div className="flex h-16 items-center px-4 md:px-8">
           <div className="mr-auto flex items-center">
             <Link href="/" className="group flex items-center space-x-2">

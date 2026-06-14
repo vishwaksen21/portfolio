@@ -11,12 +11,12 @@ export function About() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
+      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-2 md:border-b-4 border-ink relative"
     >
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="flex items-center gap-4 mb-12 md:mb-16">
+        <div className="flex items-center gap-4 mb-8">
           <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             The Journal
           </h2>
         </div>
@@ -25,11 +25,11 @@ export function About() {
           
           <div className="lg:col-span-4 space-y-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="border-4 border-ink bg-paper p-4 shadow-blueprint relative"
+              className="border-2 md:border-4 border-ink bg-paper p-4 shadow-blueprint relative"
             >
               <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
                 Fig 2.0

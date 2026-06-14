@@ -165,7 +165,7 @@ export function Portfolio() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
-      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
+      className="py-8 md:py-16 lg:py-20 bg-canvas border-b-2 md:border-b-4 border-ink relative"
     >
         <div className="absolute inset-0 bg-blueprint opacity-30 pointer-events-none" />
 
@@ -173,7 +173,7 @@ export function Portfolio() {
 
           <div className="flex items-center gap-4 mb-12 md:mb-16">
           <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             The Work
           </h2>
         </div>
@@ -186,7 +186,7 @@ export function Portfolio() {
             transition={{ duration: 0.6 }}
             className="mb-24"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-4 border-ink bg-canvas shadow-blueprint relative group">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 border-2 md:border-4 border-ink bg-canvas shadow-blueprint relative group">
               <div className="absolute -top-3 -right-3 bg-accent text-canvas text-[10px] font-bold tracking-widest uppercase py-1 px-3 border-2 border-ink z-20">
                 Featured 01
               </div>
@@ -254,7 +254,7 @@ export function Portfolio() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group cursor-pointer flex flex-col h-full border-4 border-ink bg-canvas shadow-blueprint hover:-translate-y-2 transition-transform duration-300"
+                  className="group cursor-pointer flex flex-col h-full border-2 md:border-4 border-ink bg-canvas shadow-blueprint hover:-translate-y-2 transition-transform duration-300 active:scale-[0.98]"
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="relative aspect-[4/3] border-b-4 border-ink overflow-hidden bg-canvas">
