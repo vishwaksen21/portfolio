@@ -8,62 +8,112 @@ export function About() {
   return (
     <motion.section
       id="about"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5 }}
-      className="py-20 sm:py-24 bg-background"
+      className="py-12 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
     >
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">Professional Summary</p>
-          <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl px-4">
-            About Me
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
+        <div className="flex items-center gap-4 mb-16">
+          <div className="h-4 w-4 bg-accent"></div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+            The Journal
           </h2>
-          <p className="mt-3 md:mt-4 text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 font-medium">
-            AI/ML Enthusiast | 4+ Internships | 9.06 CGPA | SPC - CMRIT
-          </p>
         </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-8 md:gap-12 lg:grid-cols-2 items-center">
+        
+        <div className="grid gap-12 lg:gap-24 lg:grid-cols-12 items-start">
+          
+          <div className="lg:col-span-4 space-y-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative order-2 lg:order-1"
+              className="border-4 border-ink bg-paper p-4 shadow-blueprint relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl w-48 sm:w-64 md:w-80 lg:max-w-sm mx-auto">
-                <Image
-                  src="/vishwak_professional.png"
-                  alt="C Vishwak Sena - Professional Photo"
-                  width={400}
-                  height={400}
-                  loading="lazy"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+              <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
+                Fig 2.0
+              </div>
+              <Image
+                src="/vishwak_professional.png"
+                alt="C Vishwak Sena - Professional Photo"
+                width={400}
+                height={500}
+                loading="lazy"
+                className="w-full h-auto object-cover border-2 border-ink grayscale hover:grayscale-0 transition-all duration-500"
+              />
+              <div className="mt-4 pt-4 border-t-2 border-ink">
+                <p className="text-xs font-bold tracking-widest uppercase text-ink">C. Vishwak Sena</p>
+                <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">Computer Science & Data Science</p>
+                <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">CMRIT • CGPA: 9.06/10</p>
               </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6 order-1 lg:order-2"
-            >
-              <div className="bg-muted/30 p-4 sm:p-6 rounded-xl border border-muted">
-                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3">Career Objective</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Computer Science student specializing in Data Science with strong programming and problem-solving skills. 
-                  Passionate about leveraging technology to solve real-world challenges through machine learning and data analytics.
+          </div>
+
+          <div className="lg:col-span-8">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+              
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.2 }}
+                className="space-y-4"
+              >
+                <h3 className="text-sm font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 inline-block">
+                  Who I Am
+                </h3>
+                <p className="text-base md:text-lg text-ink leading-relaxed font-medium">
+                  I am a builder deeply fascinated by the intersection of data and intelligent systems. I don't just write code; I construct solutions designed to scale, learn, and adapt.
                 </p>
-              </div>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                Maintaining a CGPA of 9.06/10 at CMR Institute of Technology with expertise in Python, Java, 
-                and modern web technologies, and serving as Student Placement Coordinator @ CMRIT
-              </p>
-            </motion.div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.3 }}
+                className="space-y-4"
+              >
+                <h3 className="text-sm font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 inline-block">
+                  What Drives Me
+                </h3>
+                <p className="text-base md:text-lg text-ink leading-relaxed font-medium">
+                  Curiosity is my primary engine. I am driven by the mechanics behind complex algorithms and the challenge of translating abstract data into tangible, high-impact architecture.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.4 }}
+                className="space-y-4"
+              >
+                <h3 className="text-sm font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 inline-block">
+                  What I Build
+                </h3>
+                <p className="text-base md:text-lg text-ink leading-relaxed font-medium">
+                  My work spans across foundational programming in Python, C, and Java, extending into the realms of Machine Learning. I design models, structure databases, and engineer robust applications.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.5 }}
+                className="space-y-4"
+              >
+                <h3 className="text-sm font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 inline-block">
+                  Why I Build It
+                </h3>
+                <p className="text-base md:text-lg text-ink leading-relaxed font-medium">
+                  Technology should solve real-world friction. Whether it's optimizing a process through an internship or leading initiatives as a Student Placement Coordinator, I build to create measurable impact.
+                </p>
+              </motion.div>
+
+            </div>
           </div>
         </div>
       </div>

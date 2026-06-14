@@ -47,119 +47,94 @@ export function Contact() {
   return (
     <motion.section
       id="contact"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5 }}
-      className="py-20 sm:py-24 bg-muted/30"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+      className="py-12 md:py-16 lg:py-20 bg-[#1F232B] border-b-4 border-ink relative text-canvas"
     >
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">Let's Work Together</p>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl px-4">Get In Touch</h2>
-          <p className="mt-4 md:mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            Ready to collaborate? Reach out for opportunities, projects, or just to connect!
-          </p>
-        </div>
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
-            <Button
-              size="lg"
-              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto min-h-[48px]"
-              asChild
-            >
-              <Link href="mailto:chilukurvishwak21@gmail.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Me
+      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
+        backgroundImage: 'linear-gradient(#E1D4C8 1px, transparent 1px), linear-gradient(90deg, #E1D4C8 1px, transparent 1px)',
+        backgroundSize: '80px 80px'
+      }} />
+      
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          
+          <div className="space-y-8">
+            <div className="inline-flex items-center px-3 py-1 border-2 border-canvas/30 text-xs font-bold tracking-widest uppercase text-canvas mb-4">
+              Comm. Channel
+            </div>
+            
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
+              INITIATE <br />
+              <span className="text-accent">CONTACT.</span>
+            </h2>
+            
+            <p className="text-lg text-canvas/70 font-medium max-w-md">
+              Ready to collaborate, build something new, or just want to connect? Send a message and let's start the conversation.
+            </p>
+
+            <div className="pt-8 flex flex-col gap-6">
+              <a href="mailto:chilukurvishwak21@gmail.com" className="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-canvas/20 py-4 hover:border-accent transition-colors">
+                <span className="text-sm font-bold tracking-widest uppercase text-canvas group-hover:text-accent transition-colors">Email</span>
+                <span className="text-lg font-medium break-all sm:break-normal">chilukurvishwak21@gmail.com</span>
+              </a>
+              <a href="tel:+917019151370" className="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-canvas/20 py-4 hover:border-accent transition-colors">
+                <span className="text-sm font-bold tracking-widest uppercase text-canvas group-hover:text-accent transition-colors">Phone</span>
+                <span className="text-lg font-medium">+91 7019151370</span>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-8">
+              <Link href="https://github.com/vishwaksen21/" target="_blank" rel="noopener noreferrer" className="border-2 border-canvas/30 hover:border-accent hover:bg-accent hover:text-ink transition-colors p-4 rounded-none">
+                <Github className="w-6 h-6" />
               </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="font-medium shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto min-h-[48px]"
-              asChild
-            >
-              <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-5 w-5" />
-                Connect on LinkedIn
+              <Link href="https://www.linkedin.com/in/vishwaksen21/" target="_blank" rel="noopener noreferrer" className="border-2 border-canvas/30 hover:border-accent hover:bg-accent hover:text-ink transition-colors p-4 rounded-none">
+                <Linkedin className="w-6 h-6" />
               </Link>
-            </Button>
+              <Link href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ==" target="_blank" rel="noopener noreferrer" className="border-2 border-canvas/30 hover:border-accent hover:bg-accent hover:text-ink transition-colors p-4 rounded-none">
+                <Instagram className="w-6 h-6" />
+              </Link>
+              <Link href="https://wa.me/917019151370" target="_blank" rel="noopener noreferrer" className="border-2 border-canvas/30 hover:border-accent hover:bg-accent hover:text-ink transition-colors p-4 rounded-none">
+                <WhatsappIcon />
+              </Link>
+              <Button variant="ghost" onClick={copyEmail} className="border-2 border-canvas/30 hover:border-accent hover:bg-accent hover:text-ink transition-colors p-4 h-auto rounded-none flex items-center justify-center">
+                {emailCopied ? <Check className="w-6 h-6" /> : <Copy className="w-6 h-6" />}
+              </Button>
+            </div>
           </div>
-          <Card className="border-muted shadow-xl">
-            <CardContent className="p-6 md:p-8 space-y-6">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 p-4 rounded-lg bg-muted/30">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                  <a href="mailto:chilukurvishwak21@gmail.com" className="text-sm md:text-base text-foreground hover:text-primary transition-colors font-medium">
-                    chilukurvishwak21@gmail.com
-                  </a>
-                </div>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  onClick={copyEmail}
-                  className="flex items-center gap-2"
-                >
-                  {emailCopied ? (
-                    <>
-                      <Check className="w-4 h-4" />
-                      <span className="text-xs">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-4 h-4" />
-                      <span className="text-xs">Copy</span>
-                    </>
-                  )}
-                </Button>
+
+          <div className="border-4 border-canvas/20 bg-[#1A1D24] p-8 md:p-12 shadow-blueprint">
+            <h3 className="text-xs font-bold tracking-widest uppercase text-canvas/50 mb-8 pb-4 border-b-2 border-canvas/10">
+              Direct Transmission Form
+            </h3>
+            
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const subject = formData.get('subject') as string;
+              const body = formData.get('body') as string;
+              const text = `Hi Vishwak! My name is ${subject}.\n\n${body}`;
+              window.open(`https://wa.me/917019151370?text=${encodeURIComponent(text)}`, '_blank');
+            }} className="space-y-8">
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Identification</label>
+                <input type="text" name="subject" placeholder="Your Name" className="w-full h-14 bg-transparent border-b-2 border-canvas/30 px-2 text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium" required />
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 p-4 rounded-lg bg-muted/30">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm md:text-base text-foreground font-medium">+91 7019151370</span>
+              
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Message Data</label>
+                <textarea name="body" rows={4} placeholder="Your Message" className="w-full bg-transparent border-b-2 border-canvas/30 p-2 py-4 text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium resize-none" required></textarea>
               </div>
-              <div className="pt-2">
-                <p className="text-center text-sm text-muted-foreground mb-4">Connect with me</p>
-                <div className="flex justify-center gap-6">
-                  <Link
-                    href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </Link>
-                  <Link
-                    href="https://github.com/vishwaksen21/"
-                    aria-label="GitHub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                  >
-                    <Github className="h-5 w-5" />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ=="
-                    aria-label="Instagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                  >
-                    <Instagram className="h-5 w-5" />
-                  </Link>
-                  <Link
-                    href="https://wa.me/917019151370"
-                    aria-label="WhatsApp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200 flex items-center justify-center"
-                  >
-                    <WhatsappIcon />
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+
+              <Button type="submit" size="lg" className="w-full h-14 rounded-none border-2 border-accent bg-accent text-canvas hover:bg-transparent hover:text-accent transition-colors font-bold tracking-widest uppercase mt-4">
+                Transmit Message
+              </Button>
+            </form>
+          </div>
+
         </div>
       </div>
     </motion.section>

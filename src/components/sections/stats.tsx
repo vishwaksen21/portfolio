@@ -3,6 +3,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const stats = [
   {
@@ -10,12 +11,12 @@ const stats = [
     label: 'Projects Completed',
   },
   {
-    value: '9.12',
+    value: '9.06',
     label: 'CGPA',
   },
   {
-    value: '1+',
-    label: 'Internship',
+    value: '3',
+    label: 'Internships',
   },
   {
     value: '5+',
@@ -53,26 +54,37 @@ export function Stats() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      className="py-12 sm:py-16 md:py-20"
+      className="py-12 md:py-16 bg-paper border-b-4 border-ink"
     >
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="grid grid-cols-2 gap-6 sm:gap-6 sm:grid-cols-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-4 border-ink bg-canvas shadow-blueprint"
         >
-          {stats.map((stat) => (
-            <motion.div key={stat.label} variants={itemVariants}>
-              <Card className="text-center border-0 shadow-none bg-transparent">
-                <CardContent className="flex flex-col items-center justify-center p-0">
-                  <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</p>
-                </CardContent>
-              </Card>
+          {stats.map((stat, index) => (
+            <motion.div 
+              key={stat.label} 
+              variants={itemVariants}
+              className={cn(
+                "p-8 flex flex-col justify-center items-center text-center relative border-ink",
+                index !== 3 && "border-b-4 lg:border-b-0",
+                index === 2 && "md:border-b-0",
+                (index === 0 || index === 2) && "md:border-r-4",
+                index === 1 && "lg:border-r-4"
+              )}
+            >
+              <div className="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase text-ink-secondary">
+                Data {index + 1}
+              </div>
+              <p className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink mb-2">
+                {stat.value}
+              </p>
+              <p className="text-[10px] sm:text-xs font-bold text-ink uppercase tracking-widest bg-accent text-canvas px-2 py-1 border-2 border-ink">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </motion.div>

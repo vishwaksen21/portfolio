@@ -1,27 +1,32 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
+import { cn } from '@/lib/utils';
 const experiences = [
   {
-    period: 'Sep - Dec 2025',
-    title: 'Software Intern at Quabyt Technologies',
-    description: 'Contributed to software development projects with cross-functional teams',
+    period: 'Jan 2026 - Mar 2026',
+    title: 'Web Development Intern at Sohum Trust',
+    description: 'Contributed to the design, development, and maintenance of web-based applications supporting educational initiatives.',
   },
   {
-    period: 'Jun - Aug 2025',
-    title: 'Software Intern at ISRO - Sriharikota',
-    description: 'Developed ML project on meteorological datasets, improving model accuracy by 12%',
+    period: 'Sep 2025 - Dec 2025',
+    title: 'Software Development Intern at Quabyt Technologies',
+    description: 'Developed and deployed AI-powered web applications like Avelyn, integrating frontend and backend features while optimizing performance.',
+  },
+  {
+    period: 'Aug 2024 - Nov 2024',
+    title: 'Software Intern at ISRO - SDSC SHAR',
+    description: 'Processed and cleaned large-scale meteorological datasets using Python, automating validation workflows for organizing meteorological data.',
   },
   {
     period: 'Nov 2025 - Present',
     title: 'Event Management Head at Innovation Club - CMRIT',
-    description: 'Organizing innovation-focused activities and workshops for skill development',
+    description: 'Organizing innovation-focused activities and workshops for skill development, including leading The Social Hackathon\'26.',
   },
   {
     period: 'Apr 2025 - Present',
-    title: 'Technical Lead at Center for Cognitive Activities - CMRIT',
-    description: 'Leading technical team for college-wide events and managing logistics',
+    title: 'Technical Lead at Centre for Cognitive Activities - CMRIT',
+    description: 'Leading technical team for college-wide events, hackathons, and managing technical competitions.',
   },
 ];
 
@@ -29,39 +34,80 @@ export function Experience() {
   return (
     <motion.section
       id="experience"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5 }}
-      className="py-16 bg-muted/30"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8 }}
+      className="py-12 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
     >
-      <div className="container max-w-5xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-10">
-          <p className="text-xs font-medium text-primary tracking-wider uppercase mb-2">Experience</p>
-          <h2 className="text-3xl font-bold text-foreground">Professional Journey</h2>
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
+        <div className="flex items-center gap-4 mb-10 md:mb-12">
+          <div className="h-4 w-4 bg-accent"></div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+            The Journey
+          </h2>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <div className="relative border-l-2 border-primary/30 ml-2">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-8 pb-8 last:pb-0"
-              >
-                {/* Dot - centered on the line */}
-                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
-                
-                {/* Content */}
-                <div>
-                  <p className="text-xs text-muted-foreground font-medium mb-1">{exp.period}</p>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{exp.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
-                </div>
-              </motion.div>
-            ))}
+        
+        <div className="max-w-4xl mx-auto relative mt-12">
+          {/* Vertical Timeline Axis */}
+          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[4px] bg-ink -ml-[2px]" />
+
+          <div className="space-y-8 md:space-y-0">
+            {experiences.map((exp, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={cn(
+                    "relative flex flex-col md:flex-row items-start md:items-start w-full",
+                    index > 0 && "md:-mt-16 lg:-mt-24"
+                  )}
+                >
+                  {/* Marker */}
+                  <div className="absolute left-[20px] md:left-1/2 w-8 h-8 border-4 border-ink bg-paper rounded-none -ml-4 top-4 md:top-6 z-10 flex items-center justify-center hover:scale-125 transition-transform duration-300">
+                    <div className="w-2 h-2 bg-accent" />
+                  </div>
+
+                  {/* Horizontal Connection Lines */}
+                  <div className={cn(
+                    "hidden md:block absolute top-8 md:top-10 h-[4px] bg-ink z-0",
+                    isEven ? "right-[50%] w-16" : "left-[50%] w-16"
+                  )} />
+                  {/* Removed the mobile horizontal line for a cleaner look */}
+
+                  {/* Desktop Layout - Alternating */}
+                  <div className={cn(
+                    "w-full md:w-1/2 pl-14 sm:pl-16 md:pl-0",
+                    isEven ? "md:pr-16 md:text-right" : "md:pl-16 md:ml-auto"
+                  )}>
+                    <div className="border-4 border-ink bg-paper p-5 md:p-6 shadow-blueprint relative group hover:-translate-y-1 transition-transform duration-300">
+                      
+                      <div className={cn(
+                        "mb-4 flex",
+                        isEven ? "justify-start md:justify-end" : "justify-start"
+                      )}>
+                        <p className="text-[10px] font-bold tracking-widest uppercase text-accent bg-canvas border-2 border-ink px-2 py-1 inline-block">
+                          {exp.period}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="font-display text-lg md:text-xl font-bold text-ink uppercase leading-tight mb-2">
+                          {exp.title}
+                        </h3>
+                        <p className="text-ink-secondary text-sm font-medium leading-relaxed">
+                          {exp.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

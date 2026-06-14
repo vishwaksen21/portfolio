@@ -12,127 +12,87 @@ import {
 } from '@/components/ui/tooltip';
 
 
-const skills = [
-  { name: 'Python', icon: <FileCode /> },
-  { name: 'C++', icon: <Code /> },
-  { name: 'C', icon: <Code /> },
-  { name: 'Java', icon: <Coffee /> },
-  { name: 'SQL', icon: <Database /> },
-  { name: 'HTML5', icon: <FileCode /> },
-  { name: 'CSS3', icon: <FileCode /> },
-  { name: 'JavaScript', icon: <FileCode /> },
-  { name: 'React.js', icon: <Server /> },
-  { name: 'Node.js', icon: <Server /> },
-  { name: 'MySQL', icon: <Database /> },
-  { name: 'MongoDB', icon: <DatabaseZap /> },
-  { name: 'Machine Learning', icon: <BrainCircuit /> },
+const categorizedSkills = [
+  {
+    category: "Programming Languages",
+    skills: ["Python", "Java", "C"]
+  },
+  {
+    category: "Machine Learning & AI",
+    skills: ["TensorFlow", "scikit-learn", "Ollama", "Local LLMs", "AI Model Integration"]
+  },
+  {
+    category: "Data Analysis & Visualization",
+    skills: ["Pandas", "NumPy", "Power BI", "Tableau", "Excel", "Data Cleaning", "EDA"]
+  },
+  {
+    category: "Web Development",
+    skills: ["Flask", "Streamlit", "REST APIs"]
+  },
+  {
+    category: "Databases & Querying",
+    skills: ["MySQL (SQL)", "MongoDB", "Firebase"]
+  },
+  {
+    category: "Development Tools",
+    skills: ["Git", "GitHub", "GitHub Actions", "Visual Studio Code", "Antigravity IDE"]
+  },
+  {
+    category: "Core CS",
+    skills: ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS", "Operating Systems"]
+  }
 ];
-
-
-const certifications = [
-  {
-    title: 'Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)',
-    issuer: 'Oracle',
-    url: '#',
-  },
-  {
-    title: 'Full Stack Development',
-    issuer: 'Infosys',
-    url: '#',
-  },
-  {
-    title: 'Introduction to NoSQL Databases',
-    issuer: 'Coursera',
-    url: '#',
-  },
-  {
-    title: 'Divide and Conquer, Sorting and Searching, and Randomized Algorithms',
-    issuer: 'Stanford University',
-    url: 'https://www.coursera.org/account/accomplishments/verify/1X2821Y190IK',
-  },
-  {
-    title: 'Python for Data Science, AI & Development',
-    issuer: 'IBM',
-    url: 'https://www.coursera.org/account/accomplishments/verify/5JHLC2DU0J1K',
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
 
 export function Skills() {
   return (
     <motion.section
       id="skills"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
-      className="py-20 sm:py-24 bg-background"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8 }}
+      className="py-12 md:py-16 lg:py-20 bg-paper border-b-4 border-ink relative"
     >
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase mb-4">My Abilities</p>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl px-4">
-            Skills & Expertise
+      <div className="absolute inset-0 bg-blueprint opacity-30 pointer-events-none" />
+
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
+        <div className="flex items-center gap-4 mb-16">
+          <div className="h-4 w-4 bg-accent"></div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+            Technical Stack
           </h2>
         </div>
 
-        <motion.div
-           variants={containerVariants}
-           initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true, amount: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          <motion.div variants={itemVariants}>
-            <Card className='border-muted shadow-lg'>
-              <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl">Technical Skills</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <TooltipProvider>
-                  <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
-                    {skills.map((skill) => (
-                      <Tooltip key={skill.name}>
-                        <TooltipTrigger asChild>
-                           <div className="flex flex-col items-center justify-center gap-1.5 sm:gap-2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-muted/30 rounded-xl transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 cursor-pointer p-2 sm:p-3 border border-muted">
-                              <div className="w-6 h-6 sm:w-8 sm:h-8">
-                                {skill.icon}
-                              </div>
-                              <span className="text-[10px] sm:text-xs font-medium text-center leading-tight">{skill.name}</span>
-                            </div>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{skill.name}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    ))}
-                  </div>
-                </TooltipProvider>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categorizedSkills.map((category, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="border-4 border-ink bg-canvas p-6 shadow-blueprint flex flex-col relative"
+            >
+              <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
+                Class {idx + 1}
+              </div>
+              <h3 className="text-xs font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 mb-6">
+                {category.category}
+              </h3>
+              
+              <ul className="space-y-4">
+                {category.skills.map((skill, sIdx) => (
+                  <li key={sIdx} className="flex items-center gap-3 border-b border-ink/20 pb-2 last:border-0 last:pb-0">
+                    <span className="w-1.5 h-1.5 bg-ink" />
+                    <span className="text-ink text-sm font-bold tracking-widest uppercase">
+                      {skill}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </motion.section>
   );

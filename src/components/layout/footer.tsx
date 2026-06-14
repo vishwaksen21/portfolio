@@ -3,11 +3,13 @@ import Link from "next/link";
 import { Linkedin, Github, Mail, Download } from "lucide-react";
 
 const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Work" },
-  { href: "/skills", label: "Skills" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "HOME" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/experience", label: "JOURNEY" },
+  { href: "/achievements", label: "MILESTONES" },
+  { href: "/portfolio", label: "WORK" },
+  { href: "/skills", label: "SKILLS" },
+  { href: "/contact", label: "CONTACT" },
 ];
 
 const socialLinks = [
@@ -18,49 +20,66 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="py-8 md:py-12 bg-muted/30 border-t">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center gap-6 text-center">
-          <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
+    <footer className="py-12 md:py-16 bg-canvas border-t-4 border-ink relative overflow-hidden">
+      <div className="absolute inset-0 bg-blueprint opacity-50 pointer-events-none" />
+      <div className="container px-4 md:px-6 relative z-10 max-w-[1200px] mx-auto">
+        <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto space-y-8">
+          
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-ink uppercase">
+            Let's Build Something Meaningful.
+          </h2>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full mt-8">
+            <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs font-bold tracking-widest uppercase text-ink-secondary hover:text-accent border-b-2 border-transparent hover:border-accent transition-all pb-1"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="w-full h-px bg-ink/20 my-8" />
+
+          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
+            <div className="flex items-center gap-6">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink-secondary hover:text-ink transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </Link>
+              ))}
+              <a
+                href="https://drive.google.com/file/d/1MoVJBzBhQhRc2mI4jdJMyAR8jL-mhacP/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                aria-label={social.label}
+                className="text-ink-secondary hover:text-ink transition-colors flex items-center gap-2 text-xs font-bold tracking-widest uppercase"
+                aria-label="View Resume"
               >
-                <social.icon className="h-4 w-4" />
-              </Link>
-            ))}
-            <a
-              href="/1CR23CD017_C%20VISHWAK%20SENA_RESUME.pdf"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
-              aria-label="Download Resume"
-            >
-              <Download className="h-4 w-4" />
-            </a>
+                <Download className="h-4 w-4" />
+                <span>Resume</span>
+              </a>
+            </div>
+
+            <div className="text-right">
+              <p className="text-xs font-bold tracking-widest uppercase text-ink">
+                &copy; {new Date().getFullYear()} C.V.S.
+              </p>
+              <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">
+                ALL RIGHTS RESERVED
+              </p>
+            </div>
           </div>
-          <Separator className="w-24" />
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} C Vishwak Sena. All Rights Reserved.
-          </p>
-          <p className="text-xs text-muted-foreground/70">
-            1CR23CD017, CMR Institute of Technology
-          </p>
         </div>
       </div>
     </footer>

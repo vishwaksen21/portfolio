@@ -4,14 +4,21 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { ThemeProvider } from '@/components/theme-provider';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
-import { Inter } from 'next/font/google';
+import { Manrope, Libre_Bodoni } from 'next/font/google';
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-manrope',
+});
+
+
+
+const libreBodoni = Libre_Bodoni({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-libre-bodoni',
 });
 
 export const metadata: Metadata = {
@@ -74,12 +81,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
+    <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${libreBodoni.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         {/* PWA Meta Tags */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="theme-color" content="#F3ECE5" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -101,16 +108,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cn('antialiased min-h-screen bg-background flex flex-col text-base sm:text-base')} suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className="w-full bg-background">
-            <Header />
-            <main className="flex-1 w-full">{children}</main>
-            <Footer />
-          </div>
-          <ScrollToTop />
-          <Toaster />
-        </ThemeProvider>
+      <body className={cn('antialiased min-h-screen bg-blueprint flex flex-col text-base sm:text-base')} suppressHydrationWarning>
+        <div className="w-full">
+          <Header />
+          <main className="flex-1 w-full">{children}</main>
+          <Footer />
+        </div>
+        <ScrollToTop />
+        <Toaster />
       </body>
     </html>
   );

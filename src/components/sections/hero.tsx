@@ -35,139 +35,151 @@ export function Hero() {
   return (
     <motion.section
       id="hero"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative w-full py-16 md:py-20 lg:py-28 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="relative w-full py-12 md:py-16 lg:py-20 bg-transparent border-b-4 border-ink"
     >
-      <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[size:20px_20px] dark:bg-grid-slate-100/[0.03]"></div>
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 xl:gap-24 items-center">
-          <div className="flex flex-col justify-center space-y-6 md:space-y-8 text-center lg:text-left items-center lg:items-start">
-            <div className="space-y-4 md:space-y-6">
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+      <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
+            <div className="space-y-6">
+              <motion.div 
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-xs md:text-sm font-medium text-primary tracking-wider uppercase"
+                className="inline-flex items-center px-3 py-1 border-2 border-ink text-xs font-bold tracking-widest uppercase text-ink bg-paper shadow-blueprint"
               >
-                Hey there!
-              </motion.p>
+                Fig. 1.0 — Architecture of a Builder
+              </motion.div>
+              
               <motion.h1 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+                initial="hidden"
+                animate="show"
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: { staggerChildren: 0.2, delayChildren: 0.3 }
+                  }
+                }}
+                className="font-display text-[2.75rem] leading-[0.9] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
               >
-                I am <span className="text-primary">C Vishwak Sena</span>
+                <motion.span 
+                  variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
+                  className="block"
+                >
+                  TURNING
+                </motion.span>
+                <motion.span 
+                  variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
+                  className="block"
+                >
+                  CURIOSITY
+                </motion.span>
+                <motion.span 
+                  variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
+                  className="block text-accent"
+                >
+                  INTO SYSTEMS.
+                </motion.span>
               </motion.h1>
+              
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-sm text-muted-foreground sm:text-base md:text-lg lg:text-xl max-w-xl leading-relaxed"
+                className="text-base md:text-lg lg:text-xl max-w-xl leading-relaxed text-ink-secondary font-medium"
               >
-                Computer Science & Data Science Student | Python, C, Java Developer | Machine Learning Enthusiast | Building Data-Driven Solutions
+                I am <strong className="text-ink font-bold">C Vishwak Sena</strong>, a Computer Science & Data Science student. I build data-driven solutions and intelligent systems with Python, C, and Java.
               </motion.p>
             </div>
+
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex items-center gap-4"
+              className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2"
             >
-              <Link
-                href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors duration-200" />
+              <Link href="https://www.linkedin.com/in/c-vishwak-sena-b61212286/" target="_blank" rel="noopener noreferrer" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
+                <Linkedin className="h-6 w-6" />
               </Link>
-              <Link href="https://github.com/vishwaksen21/" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors duration-200" />
+              <Link href="https://github.com/vishwaksen21/" target="_blank" rel="noopener noreferrer" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
+                <Github className="h-6 w-6" />
               </Link>
-              <Link href="https://leetcode.com/u/vishwak_sen21/" aria-label="LeetCode" target="_blank" rel="noopener noreferrer">
+              <Link href="https://leetcode.com/u/vishwak_sen21/" target="_blank" rel="noopener noreferrer" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
                 <LeetCodeIcon />
               </Link>
-              <Link href="mailto:cvi23csds@cmrit.ac.in" aria-label="Email">
-                <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors duration-200" />
+              <Link href="mailto:cvi23csds@cmrit.ac.in" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
+                <Mail className="h-6 w-6" />
               </Link>
-              <Link
-                href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ=="
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors duration-200" />
+              <Link href="https://www.instagram.com/vishwak_sen21?igsh=MXhxY2dmY251NjNvbQ==" target="_blank" rel="noopener noreferrer" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
+                <Instagram className="h-6 w-6" />
               </Link>
-              <Link
-                  href="https://wa.me/917019151370"
-                  aria-label="WhatsApp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <WhatsappIcon />
+              <Link href="https://wa.me/917019151370" target="_blank" rel="noopener noreferrer" className="p-2 -m-2 text-ink-secondary hover:text-ink transition-colors">
+                <WhatsappIcon />
               </Link>
             </motion.div>
+
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4"
+              className="flex flex-col sm:flex-row gap-4 pt-6"
             >
               <Button
                 size="lg"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
+                className="w-full sm:w-auto h-14 rounded-none border-4 border-ink bg-ink text-canvas hover:bg-canvas hover:text-ink transition-colors font-bold tracking-widest uppercase shadow-blueprint"
                 asChild
               >
-                <Link href="/portfolio">View My Work</Link>
+                <Link href="/portfolio">Explore Work</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
+                className="w-full sm:w-auto h-14 rounded-none border-4 border-ink bg-canvas text-ink hover:bg-ink hover:text-canvas transition-colors font-bold tracking-widest uppercase shadow-blueprint"
                 asChild
               >
                 <Link href="/contact">Let's Connect</Link>
               </Button>
-              <Button
-                size="lg"
-                variant="secondary"
-                className="rounded-md font-medium shadow-sm hover:shadow-md transition-all duration-200 px-6 md:px-8 w-full sm:w-auto min-h-[48px]"
-                asChild
-              >
-                <a href="/1CR23CD017_C%20VISHWAK%20SENA_RESUME.pdf" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" />
-                  Resume
-                </a>
-              </Button>
             </motion.div>
           </div>
-          <div className="relative flex flex-col items-center justify-center lg:justify-end order-first lg:order-last">
+          
+          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
             <motion.div 
-  className="relative flex flex-col items-center justify-center"
-  initial={{ scale: 0.9, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
->
-  <div className="relative">
-    <div className="absolute -inset-8 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-full blur-3xl"></div>
-    <div className="relative bg-gradient-to-br from-muted/50 to-transparent rounded-2xl p-4">
-      <Image
-        src="/vishwak_p-.png"
-        alt="Photo of C Vishwak Sen"
-        width={430}
-        height={450}
-        className="relative z-10 object-contain object-center drop-shadow-2xl w-[280px] h-[300px] sm:w-[320px] sm:h-[340px] md:w-[380px] md:h-[400px] lg:w-[430px] lg:h-[450px] rounded-xl"
-        priority
-        data-ai-hint="man portrait"
-      />
-    </div>
-  </div>
-</motion.div>
+              className="relative w-full max-w-sm"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            >
+              <div className="relative border-4 border-ink bg-paper p-4 shadow-blueprint">
+                <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-ink" />
+                <div className="absolute -top-4 -right-4 w-8 h-8 border-t-4 border-r-4 border-ink" />
+                <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-4 border-l-4 border-ink" />
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-ink" />
+                
+                <div className="bg-canvas border-2 border-ink overflow-hidden aspect-[4/5] relative">
+                  <Image
+                    src="/vishwak_p-.png"
+                    alt="Photo of C Vishwak Sen"
+                    fill
+                    className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+                    priority
+                  />
+                </div>
+                <div className="mt-4 flex justify-between items-end border-t-2 border-ink pt-2">
+                  <div>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">Scale 1:1</p>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">Date: {new Date().getFullYear()}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink text-right">No. 001</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
+
         </div>
       </div>
     </motion.section>
