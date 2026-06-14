@@ -14,14 +14,14 @@ export function About() {
       className="py-8 md:py-16 lg:py-20 bg-canvas border-b-2 md:border-b-4 border-ink relative"
     >
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-3 w-3 bg-accent"></div>
+          <h2 className="font-display text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             The Journal
           </h2>
         </div>
         
-        <div className="grid gap-12 lg:gap-24 lg:grid-cols-12 items-start">
+        <div className="grid gap-6 lg:gap-24 lg:grid-cols-12 items-start mt-6">
           
           <div className="lg:col-span-4 space-y-8">
             <motion.div

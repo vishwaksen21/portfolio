@@ -41,9 +41,9 @@ export function Experience() {
       className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
     >
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-3 w-3 bg-accent"></div>
+          <h2 className="font-display text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             The Journey
           </h2>
         </div>
@@ -81,10 +81,10 @@ export function Experience() {
 
                   {/* Desktop Layout - Alternating */}
                   <div className={cn(
-                    "w-full md:w-1/2 pl-14 sm:pl-16 md:pl-0",
+                    "w-full md:w-1/2 pl-12 sm:pl-16 md:pl-0",
                     isEven ? "md:pr-16 md:text-right" : "md:pl-16 md:ml-auto"
                   )}>
-                    <div className="border-2 md:border-4 border-ink bg-paper p-5 md:p-6 shadow-blueprint relative group hover:-translate-y-1 transition-transform duration-300">
+                    <div className="border-2 md:border-4 border-ink bg-paper p-4 md:p-6 shadow-blueprint relative group hover:-translate-y-1 transition-transform duration-300">
                       
                       <div className={cn(
                         "mb-4 flex",

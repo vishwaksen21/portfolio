@@ -67,12 +67,12 @@ export function Contact() {
               Comm. Channel
             </div>
             
-            <h2 className="font-display text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
+            <h2 className="font-display text-2xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.9]">
               INITIATE <br />
               <span className="text-accent">CONTACT.</span>
             </h2>
             
-            <p className="text-lg text-canvas/70 font-medium max-w-md">
+            <p className="text-base text-canvas/70 font-medium max-w-md">
               Ready to collaborate, build something new, or just want to connect? Send a message and let's start the conversation.
             </p>
 
@@ -106,7 +106,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="border-2 md:border-4 border-canvas/20 bg-[#1A1D24] p-6 md:p-12 shadow-blueprint">
+          <div className="border-2 md:border-4 border-canvas/20 bg-[#1A1D24] p-4 sm:p-6 md:p-12 shadow-blueprint">
             <h3 className="text-xs font-bold tracking-widest uppercase text-canvas/50 mb-8 pb-4 border-b-2 border-canvas/10">
               Direct Transmission Form
             </h3>
@@ -121,15 +121,15 @@ export function Contact() {
             }} className="space-y-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Identification</label>
-                <input type="text" name="subject" placeholder="Your Name" className="w-full h-14 bg-transparent border-b-2 border-canvas/30 px-2 text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium" required />
+                <input type="text" name="subject" placeholder="Your Name" className="w-full h-12 md:h-14 bg-transparent border-b-2 border-canvas/30 px-2 text-sm md:text-base text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium" required />
               </div>
               
               <div className="space-y-2">
                 <label className="text-[10px] font-bold tracking-widest uppercase text-canvas/70">Message Data</label>
-                <textarea name="body" rows={4} placeholder="Your Message" className="w-full bg-transparent border-b-2 border-canvas/30 p-2 py-4 text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium resize-none" required></textarea>
+                <textarea name="body" rows={4} placeholder="Your Message" className="w-full bg-transparent border-b-2 border-canvas/30 p-2 py-4 text-sm md:text-base text-canvas focus:outline-none focus:border-accent transition-colors placeholder:text-canvas/30 font-medium resize-none" required></textarea>
               </div>
 
-              <Button type="submit" size="lg" className="w-full h-14 rounded-none border-2 border-accent bg-accent text-canvas hover:bg-transparent hover:text-accent transition-colors font-bold tracking-widest uppercase mt-4">
+              <Button type="submit" size="lg" className="w-full h-12 md:h-14 rounded-none border-2 border-accent bg-accent text-canvas hover:bg-transparent hover:text-accent transition-colors font-bold tracking-widest uppercase mt-4">
                 Transmit Message
               </Button>
             </form>

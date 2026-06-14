@@ -171,9 +171,9 @@ export function Portfolio() {
 
         <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
 
-          <div className="flex items-center gap-4 mb-12 md:mb-16">
-          <div className="h-4 w-4 bg-accent"></div>
-          <h2 className="font-display text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
+          <div className="flex items-center gap-3 mb-8 md:mb-16">
+          <div className="h-3 w-3 bg-accent"></div>
+          <h2 className="font-display text-xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
             The Work
           </h2>
         </div>
@@ -269,7 +269,7 @@ export function Portfolio() {
                     </div>
                   </div>
 
-                  <div className="p-6 flex flex-col flex-grow justify-between">
+                  <div className="p-4 md:p-6 flex flex-col flex-grow relative">
                     <div>
                       <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">
                         {project.category}

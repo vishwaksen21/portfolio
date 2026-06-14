@@ -63,7 +63,7 @@ export function Hero() {
                     transition: { staggerChildren: 0.2, delayChildren: 0.3 }
                   }
                 }}
-                className="font-display text-3xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
+                className="font-display text-2xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
               >
                 <motion.span 
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
@@ -89,7 +89,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-sm sm:text-base md:text-lg lg:text-xl max-w-xl leading-relaxed text-ink-secondary font-medium border-l-4 border-accent pl-4"
+                className="text-xs sm:text-base md:text-lg lg:text-xl max-w-xl leading-relaxed text-ink-secondary font-medium border-l-2 md:border-l-4 border-accent pl-3 md:pl-4"
               >
                 I am <strong className="text-ink font-bold">C Vishwak Sena</strong>, a Computer Science & Data Science student. I build data-driven solutions and intelligent systems with Python, C, and Java.
               </motion.p>
@@ -129,7 +129,7 @@ export function Hero() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto h-14 rounded-none border-2 md:border-4 border-ink bg-ink text-canvas hover:bg-canvas hover:text-ink transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98]"
+                className="w-full sm:w-auto h-10 sm:h-14 rounded-none border-2 md:border-4 border-ink bg-ink text-canvas hover:bg-canvas hover:text-ink transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98] text-xs sm:text-sm"
                 asChild
               >
                 <Link href="/portfolio">Explore Work</Link>
@@ -137,7 +137,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto h-14 rounded-none border-2 md:border-4 border-ink bg-canvas text-ink hover:bg-ink hover:text-canvas transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98]"
+                className="w-full sm:w-auto h-10 sm:h-14 rounded-none border-2 md:border-4 border-ink bg-canvas text-ink hover:bg-ink hover:text-canvas transition-colors font-bold tracking-widest uppercase shadow-blueprint active:scale-[0.98] text-xs sm:text-sm"
                 asChild
               >
                 <Link href="/contact">Let's Connect</Link>
@@ -158,7 +158,7 @@ export function Hero() {
                 <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 md:border-b-4 border-l-2 md:border-l-4 border-ink" />
                 <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 md:border-b-4 border-r-2 md:border-r-4 border-ink" />
                 
-                <div className="bg-canvas border-2 border-ink overflow-hidden aspect-[4/5] relative">
+                <div className="bg-canvas border-2 border-ink overflow-hidden aspect-video sm:aspect-square lg:aspect-[4/5] relative">
                   <Image
                     src="/vishwak_p-.png"
                     alt="Photo of C Vishwak Sen"
