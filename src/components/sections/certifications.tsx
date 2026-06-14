@@ -45,6 +45,7 @@ export function Certifications() {
       transition={{ duration: 0.8 }}
       className="py-8 md:py-16 lg:py-20 bg-canvas border-b-4 border-ink relative"
     >
+      <div className="absolute inset-0 bg-blueprint opacity-50 pointer-events-none" />
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         <div className="flex items-center gap-3 mb-6 md:mb-16">
           <div className="h-3 w-3 bg-accent"></div>
