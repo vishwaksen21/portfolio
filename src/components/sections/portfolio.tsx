@@ -246,10 +246,6 @@ export function Portfolio() {
 
           {/* Supporting Projects */}
           <div className="mt-12 md:mt-24">
-            <h3 className="font-display text-xl md:text-3xl font-bold tracking-tight text-ink uppercase mb-6 md:mb-12">
-              Other Selected Works
-            </h3>
-            
             {/* Horizontal Scroll on Mobile, Grid on Desktop */}
             <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:snap-none md:gap-8 md:mx-0 md:px-0 hide-scrollbar">
               <AnimatePresence>
