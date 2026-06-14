@@ -1,17 +1,10 @@
 <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-  <!-- Badge Background (ink) -->
-  <rect width="256" height="256" fill="#1F232B" />
+  <!-- Dark brutalist background -->
+  <rect width="256" height="256" fill="#1A1D24" />
   
-  <!-- Badge Text (canvas) -->
-  <text 
-    x="128" 
-    y="138" 
-    font-family="system-ui, -apple-system, sans-serif" 
-    font-size="64" 
-    font-weight="900" 
-    fill="#E1D4C8" 
-    text-anchor="middle" 
-    dominant-baseline="middle" 
-    letter-spacing="6"
-  >C.V.S</text>
+  <!-- Thick geometric 'V' -->
+  <path d="M 56 64 L 128 180 L 200 64" fill="none" stroke="#E1D4C8" stroke-width="40" stroke-linejoin="miter" stroke-linecap="square" />
+  
+  <!-- Orange accent underscore -->
+  <rect x="108" y="200" width="40" height="16" fill="#D35400" />
 </svg>
