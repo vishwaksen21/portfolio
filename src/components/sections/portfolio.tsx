@@ -191,7 +191,7 @@ export function Portfolio() {
                 Featured 01
               </div>
 
-              <div className="relative aspect-video lg:aspect-[4/3] w-full border-b-2 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[300px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
+              <div className="lg:col-span-7 relative aspect-video lg:aspect-[4/3] w-full border-b-2 lg:border-b-0 lg:border-r-4 border-ink overflow-hidden bg-canvas cursor-pointer min-h-[300px] lg:min-h-[450px]" onClick={() => setSelectedProject(featuredProject)}>
                 <Image
                   src={featuredProject.image}
                   alt={featuredProject.title}
