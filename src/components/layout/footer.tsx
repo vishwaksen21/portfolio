@@ -2,84 +2,54 @@ import { Separator } from "../ui/separator";
 import Link from "next/link";
 import { Linkedin, Github, Mail, Download } from "lucide-react";
 
-const footerLinks = [
-  { href: "/", label: "HOME" },
-  { href: "/about", label: "ABOUT" },
-  { href: "/experience", label: "JOURNEY" },
-  { href: "/achievements", label: "MILESTONES" },
-  { href: "/portfolio", label: "WORK" },
-  { href: "/skills", label: "SKILLS" },
-  { href: "/contact", label: "CONTACT" },
-];
-
 const socialLinks = [
-  { href: "https://www.linkedin.com/in/c-vishwak-sena-b61212286/", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://github.com/vishwaksen21/", icon: Github, label: "GitHub" },
-  { href: "mailto:chilukurvishwak21@gmail.com", icon: Mail, label: "Email" },
+  { href: "https://www.linkedin.com/in/c-vishwak-sena-b61212286/", label: "LINKEDIN" },
+  { href: "https://github.com/vishwaksen21/", label: "GITHUB" },
+  { href: "mailto:chilukurvishwak21@gmail.com", label: "EMAIL" },
+  { href: "https://drive.google.com/file/d/1MoVJBzBhQhRc2mI4jdJMyAR8jL-mhacP/view?usp=drive_link", label: "RESUME" }
 ];
 
 export function Footer() {
   return (
-    <footer className="py-12 md:py-16 bg-canvas border-t-4 border-ink relative overflow-hidden">
-      <div className="absolute inset-0 bg-blueprint opacity-50 pointer-events-none" />
+    <footer className="py-8 bg-ink border-t-4 border-accent relative overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10 max-w-[1200px] mx-auto">
-        <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto space-y-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-ink uppercase">
-            Let's Build Something Meaningful.
-          </h2>
-          
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full mt-8">
-            <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-              {footerLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-xs font-bold tracking-widest uppercase text-ink-secondary hover:text-accent border-b-2 border-transparent hover:border-accent transition-all pb-1"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl md:text-4xl font-bold tracking-tight text-canvas uppercase leading-none">
+              C. VISHWAK SENA
+            </h2>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-accent rounded-none" />
+              <p className="text-[10px] font-bold tracking-widest uppercase text-canvas/50">
+                SOFTWARE & DATA ENGINEERING
+              </p>
+            </div>
           </div>
 
-          <div className="w-full h-px bg-ink/20 my-8" />
-
-          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
-            <div className="flex items-center gap-6">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-ink-secondary hover:text-ink transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </Link>
-              ))}
+          <div className="flex flex-wrap gap-6 md:gap-8 border-y-2 border-canvas/10 md:border-y-0 py-4 md:py-0 w-full md:w-auto">
+            {socialLinks.map((social) => (
               <a
-                href="https://drive.google.com/file/d/1MoVJBzBhQhRc2mI4jdJMyAR8jL-mhacP/view?usp=drive_link"
+                key={social.label}
+                href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-ink-secondary hover:text-ink transition-colors flex items-center gap-2 text-xs font-bold tracking-widest uppercase"
-                aria-label="View Resume"
+                className="text-xs font-bold tracking-widest uppercase text-canvas/70 hover:text-accent transition-colors"
               >
-                <Download className="h-4 w-4" />
-                <span>Resume</span>
+                {social.label}
               </a>
-            </div>
-
-            <div className="text-right">
-              <p className="text-xs font-bold tracking-widest uppercase text-ink">
-                &copy; {new Date().getFullYear()} C.V.S.
-              </p>
-              <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">
-                ALL RIGHTS RESERVED
-              </p>
-            </div>
+            ))}
           </div>
+
+          <div className="text-left md:text-right w-full md:w-auto flex flex-row md:flex-col justify-between items-end md:items-end">
+            <p className="text-xs font-bold tracking-widest uppercase text-canvas">
+              &copy; {new Date().getFullYear()} C.V.S.
+            </p>
+            <p className="text-[10px] tracking-widest uppercase text-canvas/40 mt-1">
+              ALL RIGHTS RESERVED
+            </p>
+          </div>
+
         </div>
       </div>
     </footer>
