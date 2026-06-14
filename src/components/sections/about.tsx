@@ -29,7 +29,7 @@ export function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="border-2 md:border-4 border-ink bg-paper p-4 shadow-blueprint relative"
+              className="w-48 sm:w-64 lg:w-full mx-auto border-2 md:border-4 border-ink bg-paper p-3 md:p-4 shadow-blueprint relative"
             >
               <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
                 Fig 2.0
