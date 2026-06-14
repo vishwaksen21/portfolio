@@ -50,7 +50,7 @@ export function Hero() {
                 transition={{ delay: 0.2 }}
                 className="inline-flex items-center px-3 py-1 border-2 border-ink text-xs font-bold tracking-widest uppercase text-ink bg-paper shadow-blueprint"
               >
-                Fig. 1.0 — Architecture of a Builder
+                SOFTWARE & DATA ENGINEERING
               </motion.div>
               
               <motion.h1 
