@@ -18,19 +18,19 @@ const certifications = [
   {
     title: 'Data Visualization',
     provider: 'Kaggle',
-    date: '2024',
+    date: '2025',
     credential: 'Certification of Completion',
   },
   {
     title: 'On-Premise Data Warehouse using BW/4HANA',
     provider: 'SAP',
-    date: '2024',
+    date: '2025',
     credential: 'Certification of Completion',
   },
   {
     title: 'Software Engineering Job Simulation',
     provider: 'JPMorgan Chase',
-    date: '2024',
+    date: '2025',
     credential: 'Job Simulation',
   },
 ];
@@ -65,7 +65,7 @@ export function Certifications() {
               className="border-2 md:border-4 border-ink bg-paper p-4 md:p-6 shadow-blueprint relative flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
             >
 
-              
+
               <div className="flex-grow">
                 <p className="text-[10px] font-bold tracking-widest uppercase text-accent mb-3 border-b-2 border-ink pb-2 inline-block">
                   {cert.provider}
