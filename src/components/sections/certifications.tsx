@@ -77,15 +77,7 @@ export function Certifications() {
                 </h3>
               </div>
 
-              <div className="mt-8 flex items-end justify-between border-t-2 border-ink pt-4">
-                <div>
-                  <p className="text-[10px] font-bold tracking-widest uppercase text-ink-secondary">
-                    Credential
-                  </p>
-                  <p className="text-xs font-bold tracking-widest uppercase text-ink mt-1">
-                    {cert.credential}
-                  </p>
-                </div>
+              <div className="mt-8 flex items-end justify-end border-t-2 border-ink pt-4">
                 <div className="text-right">
                   <p className="text-[10px] font-bold tracking-widest uppercase text-ink-secondary">
                     Year

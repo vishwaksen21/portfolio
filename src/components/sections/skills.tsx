@@ -58,8 +58,8 @@ export function Skills() {
       <div className="container max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         <div className="flex items-center gap-3 mb-6 md:mb-16">
           <div className="h-3 w-3 bg-accent"></div>
-          <h2 className="font-display text-xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
-            Technical Stack
+          <h2 className="font-display text-xl md:text-5xl lg:text-6xl font-bold tracking-normal text-ink uppercase">
+            Technical&nbsp;Stack
           </h2>
         </div>
 

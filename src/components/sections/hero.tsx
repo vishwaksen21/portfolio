@@ -63,7 +63,7 @@ export function Hero() {
                     transition: { staggerChildren: 0.2, delayChildren: 0.3 }
                   }
                 }}
-                className="font-display text-2xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-tight text-ink uppercase"
+                className="font-display text-2xl leading-[1.1] sm:text-6xl md:text-7xl lg:text-[7rem] font-bold tracking-normal text-ink uppercase"
               >
                 <motion.span 
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 

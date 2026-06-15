@@ -173,8 +173,8 @@ export function Portfolio() {
 
           <div className="flex items-center gap-3 mb-8 md:mb-16">
           <div className="h-3 w-3 bg-accent"></div>
-          <h2 className="font-display text-xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink uppercase">
-            The Work
+          <h2 className="font-display text-xl md:text-5xl lg:text-6xl font-bold tracking-normal text-ink uppercase">
+            Selected&nbsp;Works
           </h2>
         </div>
 
