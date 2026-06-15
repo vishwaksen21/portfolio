@@ -73,9 +73,6 @@ export function Skills() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="border-2 md:border-4 border-ink bg-canvas p-4 md:p-6 shadow-blueprint flex flex-col relative hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
-                Class {idx + 1}
-              </div>
               <h3 className="text-xs font-bold tracking-widest uppercase text-accent border-b-2 border-ink pb-2 mb-6">
                 {category.category}
               </h3>
