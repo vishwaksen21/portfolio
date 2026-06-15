@@ -76,9 +76,7 @@ export function Stats() {
                 index === 1 && "lg:border-r-4"
               )}
             >
-              <div className="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase text-ink-secondary">
-                Data {index + 1}
-              </div>
+
               <p className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink mb-2">
                 {stat.value}
               </p>
