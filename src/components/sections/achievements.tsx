@@ -92,9 +92,7 @@ export function Achievements() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="border-2 md:border-4 border-ink bg-paper p-4 md:p-6 shadow-blueprint relative flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="absolute top-2 right-2 text-[10px] font-bold tracking-widest uppercase text-ink">
-                Vol. {index + 1}
-              </div>
+
               
               <div className="flex items-center gap-3 mb-6 border-b-2 border-ink pb-4">
                 <div className="text-accent">
