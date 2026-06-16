@@ -67,7 +67,7 @@ export function Contact() {
               Comm. Channel
             </div>
             
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-normal text-canvas uppercase leading-[0.9]">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-normal text-white uppercase leading-[0.9]">
               INITIATE <br />
               <span className="text-accent">CONTACT.</span>
             </h2>
