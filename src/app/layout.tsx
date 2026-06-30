@@ -23,7 +23,7 @@ const libreBodoni = Libre_Bodoni({
 
 export const metadata: Metadata = {
   title: 'C Vishwak Sena | Portfolio - Computer Science & Data Science Student',
-  description: 'Portfolio of C Vishwak Sena - Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Python, Java, C++, Machine Learning, and Full-Stack Development. CGPA: 9.06/10. ISRO Intern.',
+  description: 'Portfolio of C Vishwak Sena - Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Python, Java, C++, Machine Learning, and Full-Stack Development. CGPA: 9.068/10. ISRO Intern.',
   keywords: ['C Vishwak Sena', 'Portfolio', 'Computer Science', 'Data Science', 'Machine Learning', 'Python Developer', 'CMRIT', 'ISRO Intern', 'Web Development', 'React', 'Next.js'],
   authors: [{ name: 'C Vishwak Sena' }],
   creator: 'C Vishwak Sena',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'C Vishwak Sena | Computer Science & Data Science Portfolio',
-    description: 'Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Machine Learning, Python, and Full-Stack Development. CGPA: 9.12/10.',
+    description: 'Computer Science & Data Science Student at CMR Institute of Technology. Specializing in Machine Learning, Python, and Full-Stack Development. CGPA: 9.068/10.',
     url: 'https://vishwaksen.vercel.app',
     siteName: 'C Vishwak Sena Portfolio',
     locale: 'en_US',

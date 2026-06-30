@@ -11,7 +11,7 @@ const stats = [
     label: 'Projects Completed',
   },
   {
-    value: '9.06',
+    value: '9.068',
     label: 'CGPA',
   },
   {

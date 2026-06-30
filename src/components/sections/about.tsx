@@ -44,7 +44,7 @@ export function About() {
               <div className="mt-4 pt-4 border-t-2 border-ink text-center">
                 <p className="text-xs font-bold tracking-widest uppercase text-ink">C. Vishwak Sena</p>
                 <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">Computer Science & Data Science</p>
-                <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">CMRIT • CGPA: 9.06/10</p>
+                <p className="text-[10px] tracking-widest uppercase text-ink-secondary mt-1">CMRIT • CGPA: 9.068/10</p>
               </div>
             </motion.div>
           </div>
