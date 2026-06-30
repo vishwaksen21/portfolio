@@ -77,12 +77,20 @@ export function Hero() {
                 >
                   CURIOSITY
                 </motion.span>
-                <motion.span 
-                  variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
-                  className="block text-accent"
-                >
-                  INTO SYSTEMS.
-                </motion.span>
+                <span className="block text-accent">
+                  <motion.span 
+                    variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
+                    className="inline-block mr-3 md:mr-6"
+                  >
+                    INTO
+                  </motion.span>
+                  <motion.span 
+                    variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }} 
+                    className="inline-block"
+                  >
+                    SYSTEMS.
+                  </motion.span>
+                </span>
               </motion.h1>
               
               <motion.p 
