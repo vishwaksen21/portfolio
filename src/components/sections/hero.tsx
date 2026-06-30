@@ -169,11 +169,11 @@ export function Hero() {
                 </div>
                 <div className="mt-4 flex justify-between items-end border-t-2 border-ink pt-2">
                   <div>
-                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">Scale 1:1</p>
-                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">Date: {new Date().getFullYear()}</p>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">LOCATION: BENGALURU, IN</p>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink">BATCH: 2027</p>
                   </div>
                   <div>
-                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink text-right">No. 001</p>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-ink text-right">ID: CVS-001</p>
                   </div>
                 </div>
               </div>
